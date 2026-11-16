@@ -1112,3 +1112,17 @@ structure.mcp_only: Endpoints MCP uniquement
 structure.mcp_open_all_confirm: Ouvrir TOUS les endpoints du service à MCP Try-It ? La restriction aux endpoints marqués ne s'appliquera plus.
 structure.mcp_removed: "Retirés de MCP Try-It : {count} endpoint(s)."
 structure.mcp_save_failed: Impossible d'enregistrer la liste MCP Try-It
+license.autorenew_enabled: Activé
+license.autorenew_error: Erreur
+license.autorenew_hint: Une fois par heure, l'installation demande au serveur de licences une licence plus récente et l'installe ; le license.json remplacé est conservé sous un nouveau nom.
+license.autorenew_last_check: Dernière vérification
+license.autorenew_result: Résultat
+license.autorenew_result_created: une nouvelle licence a été émise et installée
+license.autorenew_result_not_changed: la licence du serveur n'est pas plus récente, rien n'a changé
+license.autorenew_result_up_to_date: la licence est à jour
+license.autorenew_result_updated: une licence plus récente a été installée
+license.autorenew_saved: Enregistré.
+license.autorenew_title: Renouvellement automatique
+license.autorenew_token: Token d'autorisation
+license.autorenew_token_saved: "Un token est enregistré : laissez vide pour le conserver"
+license.main_title: Licence

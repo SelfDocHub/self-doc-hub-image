@@ -1112,3 +1112,17 @@ structure.mcp_only: 仅 MCP 端点
 structure.mcp_open_all_confirm: 将该服务的所有端点开放给 MCP 试一试？对已标记端点的限制将不再生效。
 structure.mcp_removed: 已从 MCP 试一试中移除：{count} 个端点。
 structure.mcp_save_failed: 无法保存 MCP 试一试列表
+license.autorenew_enabled: 已启用
+license.autorenew_error: 错误
+license.autorenew_hint: 安装实例每小时向许可证服务器请求一次更新的许可证并自动安装；被替换的 license.json 会以新名称保留。
+license.autorenew_last_check: 上次检查
+license.autorenew_result: 结果
+license.autorenew_result_created: 已签发并安装新许可证
+license.autorenew_result_not_changed: 服务器上的许可证并不更新，未做任何更改
+license.autorenew_result_up_to_date: 许可证已是最新
+license.autorenew_result_updated: 已安装更新的许可证
+license.autorenew_saved: 已保存。
+license.autorenew_title: 自动续期
+license.autorenew_token: 授权令牌
+license.autorenew_token_saved: 已保存令牌——留空以保留
+license.main_title: 许可证
