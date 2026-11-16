@@ -50,6 +50,7 @@ All state lives in the `docs-hub-data` Docker volume (mounted at `/data`). Run e
 
 - Back up the volume and your `.env` file (the session secret is needed to decrypt stored secrets).
 - Upgrade: `git pull && docker compose up -d --build`. Migrations run automatically.
+- Translations: the stock files (`en`, `ru`, `de`, `es`, `fr`, `pt-BR`, `zh-CN`) in `/data/translations` are refreshed automatically when the image brings new ones; the previous copies are saved to `/data/translations/backup/<timestamp>/`. Put custom edits into a file with another name (for example `it.yaml`) - such files are never touched.
 
 Other settings are optional; see the [configuration reference](https://selfdochub.com/documentation/configuration).
 
