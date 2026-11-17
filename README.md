@@ -18,18 +18,22 @@ This repository contains the prebuilt `docs-hub` binary and Docker settings to r
 
 ## Quick start
 
-```bash
-git clone https://github.com/SelfDocHub/self-doc-hub-image.git
-cd self-doc-hub-image
+The image is published on Docker Hub: [selfdochub/selfdochub](https://hub.docker.com/r/selfdochub/selfdochub). You only need the compose file and the example settings:
 
-cp .env.example .env
+```bash
+mkdir selfdochub && cd selfdochub
+curl -fsSLO https://raw.githubusercontent.com/SelfDocHub/self-doc-hub-image/main/docker-compose.yml
+curl -fsSL https://raw.githubusercontent.com/SelfDocHub/self-doc-hub-image/main/.env.example -o .env
 # edit .env: set DOCS_HUB_BASE_URL and DOCS_HUB_SESSION_SECRET (openssl rand -base64 32)
 
-docker compose up -d --build
+docker compose pull
+docker compose up -d
 docker compose logs -f docs-hub
 ```
 
 The application listens on `127.0.0.1:8080`. Put a reverse proxy with TLS (Nginx, Caddy) in front of it, and set `client_max_body_size` to at least 12m.
+
+The compose file pins a release tag. To build the image from this repository instead (`git clone` it first), run `docker compose up -d --build`.
 
 ## First run
 
@@ -49,7 +53,7 @@ Upload the resulting `license.json` on the License page. Check health: `curl htt
 All state lives in the `docs-hub-data` Docker volume (mounted at `/data`). Run exactly one container per volume.
 
 - Back up the volume and your `.env` file (the session secret is needed to decrypt stored secrets).
-- Upgrade: `git pull && docker compose up -d --build`. Migrations run automatically.
+- Upgrade: set `SELFDOCHUB_VERSION=<new tag>` in `.env` (tags: [Docker Hub](https://hub.docker.com/r/selfdochub/selfdochub/tags)), then `docker compose pull && docker compose up -d`. Migrations run automatically.
 - Translations: the stock files (`en`, `ru`, `de`, `es`, `fr`, `pt-BR`, `zh-CN`) in `/data/translations` are refreshed automatically when the image brings new ones; the previous copies are saved to `/data/translations/backup/<timestamp>/`. Put custom edits into a file with another name (for example `it.yaml`) - such files are never touched.
 
 Other settings are optional; see the [configuration reference](https://selfdochub.com/documentation/configuration).
