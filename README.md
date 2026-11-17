@@ -19,7 +19,7 @@ This repository contains the prebuilt `docs-hub` binary and Docker settings to r
 ## Quick start
 
 ```bash
-git clone https://github.com/vagrand/self-doc-hub-image.git
+git clone https://github.com/SelfDocHub/self-doc-hub-image.git
 cd self-doc-hub-image
 
 cp .env.example .env
