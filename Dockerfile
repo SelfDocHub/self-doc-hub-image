@@ -2,7 +2,9 @@ FROM alpine:3.20
 RUN apk add --no-cache ca-certificates wget \
     && addgroup -S docs-hub && adduser -S docs-hub -G docs-hub \
     && mkdir -p /data && chown docs-hub:docs-hub /data
-COPY --chmod=0755 docs-hub /usr/local/bin/docs-hub
+# bin/<arch>/docs-hub is put here by the release workflow of the (private) source repository.
+ARG TARGETARCH
+COPY --chmod=0755 bin/${TARGETARCH}/docs-hub /usr/local/bin/docs-hub
 COPY --chmod=0755 docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 COPY translations /opt/docs-hub/translations
 RUN chmod -R a+rX /opt/docs-hub

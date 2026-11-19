@@ -14,7 +14,7 @@ Main features:
 - Notifications and audit log
 - Single static binary, SQLite storage, no external database
 
-This repository contains the prebuilt `docs-hub` binary and Docker settings to run it on your host.
+This repository contains the Docker settings to run it on your host and the release downloads: prebuilt `docs-hub` binaries for Linux (amd64, arm64), macOS (arm64) and Windows (amd64) are attached to every [release](../../releases) with a `checksums.txt` file. The Docker image is multi-arch (`linux/amd64` and `linux/arm64`).
 
 ## Quick start
 
@@ -33,7 +33,7 @@ docker compose logs -f docs-hub
 
 The application listens on `127.0.0.1:8080`. Put a reverse proxy with TLS (Nginx, Caddy) in front of it, and set `client_max_body_size` to at least 12m.
 
-The compose file pins a release tag. To build the image from this repository instead (`git clone` it first), run `docker compose up -d --build`.
+The compose file pins a release tag.
 
 ## First run
 
