@@ -2,7 +2,7 @@ services:
   docs-hub:
     # Pinned release. To upgrade, set SELFDOCHUB_VERSION in .env (or edit the tag here), then run
     # `docker compose pull && docker compose up -d`. Tags: https://hub.docker.com/r/selfdochub/selfdochub/tags
-    image: selfdochub/selfdochub:${SELFDOCHUB_VERSION:-1.0.0}
+    image: selfdochub/selfdochub:${SELFDOCHUB_VERSION:-1.1.0}
     restart: unless-stopped
     env_file:
       - .env
