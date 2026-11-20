@@ -1126,3 +1126,195 @@ license.autorenew_title: Auto renew
 license.autorenew_token: Authorization token
 license.autorenew_token_saved: A token is saved - leave empty to keep it
 license.main_title: License
+button.publish: Publishing
+license.feature_publish: Documentation publishing
+license.limit_max_publish_domains: Publishing domains
+license.limit_max_publish_versions_per_domain: Published versions per domain
+publish.back: Back to the documentation
+publish.back_label: Documentation
+publish.back_to_styles: Back to the list
+publish.back_to_versions: Back to the list
+publish.contrast_warning: "Low contrast ({scheme}): {fg} on {bg} is {ratio}:1, 4.5:1 is recommended."
+publish.created_at: Created
+publish.created_by: Created by
+publish.domain: Domain
+publish.domain_add: Add domain
+publish.domain_delete_confirm: Delete this domain together with all versions published on it? This cannot be undone.
+publish.domain_edit: Edit domain
+publish.domain_select: Domain
+publish.domains: Domains
+publish.domains_hint: Domains the documentation is published on.
+publish.endpoints: endpoints
+publish.footer_add_column: Add block
+publish.footer_add_link: Add link
+publish.footer_block_title: Block title
+publish.footer_bottom_links: Links on the right of the bottom row
+publish.footer_copyright: Copyright ({year} is replaced by the current year)
+publish.footer_link_text: Link text
+publish.footer_text: Text next to the bottom logo
+publish.footer_title: Footer
+publish.group_accent: Accent
+publish.group_chrome: Header and footer
+publish.group_layout: Typography and layout
+publish.group_methods: HTTP methods
+publish.group_page: Page
+publish.group_statuses: Response statuses
+publish.image_favicon: Favicon
+publish.image_link: Link (opens on click)
+publish.image_logo_bottom: Bottom logo
+publish.image_logo_top: Top logo
+publish.image_none: No picture
+publish.image_upload: Upload
+publish.images_hint: PNG, JPEG or WebP up to 1 MB (the favicon may also be ICO). Save the style first to upload pictures.
+publish.images_title: Images
+publish.move_down: Move down
+publish.move_up: Move up
+publish.no: No
+publish.no_domains: No domains
+publish.no_domains_yet: No domains yet.
+publish.no_styles_yet: No styles yet.
+publish.no_versions_yet: No versions published on this domain yet.
+publish.option_compact: Compact
+publish.option_inter: Inter
+publish.option_large: Large
+publish.option_medium: Medium
+publish.option_none: None
+publish.option_normal: Normal
+publish.option_roboto: Roboto
+publish.option_serif: Serif
+publish.option_small: Small
+publish.option_source-sans: Source Sans
+publish.option_system: System
+publish.pages: pages
+publish.palette_delete: Delete palette
+publish.palette_delete_confirm: Delete this palette?
+publish.palette_name_title: Palette name
+publish.palette_presets: Presets
+publish.palette_rename: Rename palette
+publish.palette_save_new: Save as palette
+publish.palette_saved: Saved palettes
+publish.palette_scheme: Color scheme
+publish.palette_source: Start from
+publish.palette_title: Colors and style
+publish.palette_update: Save changes to the palette
+publish.palette_update_confirm: Every style that uses this palette will change. Continue?
+publish.preview: Preview
+publish.preview_site: Your site
+publish.remove_service: Remove the service
+publish.remove_service_confirm: Remove this service from the published version?
+publish.service: Service
+publish.service_content: Published
+publish.service_examples: Examples
+publish.service_overlay: Overlays
+publish.service_version: Service version
+publish.site_default_language: Default language
+publish.site_description: Default description
+publish.site_languages: Languages (comma separated, e.g. en, ru)
+publish.site_name: Site name
+publish.site_title: Site
+publish.status_building: Building
+publish.status_error: Build failed
+publish.style: Style
+publish.style_add: Add style
+publish.style_default: Default look
+publish.style_delete_confirm: Delete this style? This cannot be undone.
+publish.style_edit: Edit style
+publish.style_name: Name
+publish.style_name_required: Enter the style name.
+publish.style_saved: Saved.
+publish.styles: Styles and brands
+publish.styles_hint: Colors, logos and footers of the published sites.
+publish.title: Publishing
+publish.token_accent: Accent (links, buttons)
+publish.token_accent_text: Text on accent
+publish.token_bg: Page background
+publish.token_border: Borders
+publish.token_code_bg: Code background
+publish.token_content_width: Content width (px)
+publish.token_density: Density
+publish.token_font: Font
+publish.token_font_size: Font size (px)
+publish.token_footer_bg: Footer background
+publish.token_footer_text: Footer text
+publish.token_header_bg: Header background
+publish.token_header_text: Header text
+publish.token_method_delete: DELETE
+publish.token_method_get: GET
+publish.token_method_patch: PATCH
+publish.token_method_post: POST
+publish.token_method_put: PUT
+publish.token_radius: Corner radius
+publish.token_reset: Reset to the preset value
+publish.token_status_2xx: Status 2xx
+publish.token_status_4xx: Status 4xx
+publish.token_status_5xx: Status 5xx
+publish.token_surface: Panels
+publish.token_text: Text
+publish.token_text_muted: Secondary text
+publish.version_add: Add version
+publish.version_add_service: Add a service
+publish.version_add_services: Add services
+publish.version_by: Published by
+publish.version_delete_confirm: Delete this version and its published files? This cannot be undone.
+publish.version_edit: Version
+publish.version_hidden: Hidden
+publish.version_hide: Hide
+publish.version_locked_hint: "The parameters of a service in a published version cannot be changed: remove the service and add it again."
+publish.version_name: Name
+publish.version_name_required: Enter the version name.
+publish.version_preview: Preview on the site
+publish.version_published: Published
+publish.version_services: Services
+publish.version_show: Show
+publish.version_updated: Updated
+publish.versions: Versions
+publish.versions_hint: Documentation versions published on the selected domain.
+publish.versions_no_domain: Choose a domain in the top bar first.
+publish.yes: Yes
+site.deprecated: Deprecated
+site.errors: Errors
+site.example_request: Request example
+site.example_response: Response example
+site.home: Home
+site.language: Language
+site.menu: Menu
+site.not_found: Page not found
+site.on_this_page: On this page
+site.parameters: Parameters
+site.preview_banner: You are looking at a preview of a hidden version
+site.request: Request
+site.request_body: Request body
+site.responses: Responses
+site.search_no_results: Nothing found
+site.search_placeholder: Search the documentation
+site.theme_dark: Dark
+site.theme_light: Light
+site.version: Version
+site.versions: Versions
+publish.service_branch: Branch
+publish.header_height: Height of the top bar, px (40-120)
+publish.header_links: Links of the top bar (shown in one line, in this order)
+publish.header_title: Top bar
+publish.option_always: Always
+publish.option_hover: On hover
+publish.token_footer_link: Footer links
+publish.token_footer_link_hover: Footer links on hover
+publish.token_header_link: Top bar links
+publish.token_header_link_hover: Top bar links on hover
+publish.token_link_underline: Link underline (top bar and footer)
+publish.group_footer_links: Footer links
+publish.group_header_links: Top bar links
+publish.option_bold: Bold
+publish.token_footer_link_size: Font size (px)
+publish.token_footer_link_underline: Underline
+publish.token_footer_link_weight: Font weight
+publish.token_header_link_size: Font size (px)
+publish.token_header_link_underline: Underline
+publish.token_header_link_weight: Font weight
+publish.option_underline: Underlined
+publish.token_footer_link_hover_size: Font size on hover (px)
+publish.token_footer_link_hover_underline: Underline on hover
+publish.token_footer_link_hover_weight: Font weight on hover
+publish.token_header_link_hover_size: Font size on hover (px)
+publish.token_header_link_hover_underline: Underline on hover
+publish.token_header_link_hover_weight: Font weight on hover

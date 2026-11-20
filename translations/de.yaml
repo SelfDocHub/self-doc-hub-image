@@ -1126,3 +1126,195 @@ license.autorenew_title: Automatische Verlängerung
 license.autorenew_token: Autorisierungs-Token
 license.autorenew_token_saved: Ein Token ist gespeichert – leer lassen, um es beizubehalten
 license.main_title: Lizenz
+button.publish: Veröffentlichung
+license.feature_publish: Veröffentlichung der Dokumentation
+license.limit_max_publish_domains: Domains für die Veröffentlichung
+license.limit_max_publish_versions_per_domain: Veröffentlichte Versionen pro Domain
+publish.back: Zurück zur Dokumentation
+publish.back_label: Dokumentation
+publish.back_to_styles: Zurück zur Liste
+publish.back_to_versions: Zurück zur Liste
+publish.contrast_warning: "Geringer Kontrast ({scheme}): {fg} auf {bg} ergibt {ratio}:1, empfohlen sind 4,5:1."
+publish.created_at: Erstellt
+publish.created_by: Erstellt von
+publish.domain: Domain
+publish.domain_add: Domain hinzufügen
+publish.domain_delete_confirm: Diese Domain samt allen darauf veröffentlichten Versionen löschen? Das lässt sich nicht rückgängig machen.
+publish.domain_edit: Domain bearbeiten
+publish.domain_select: Domain
+publish.domains: Domains
+publish.domains_hint: Domains, auf denen die Dokumentation veröffentlicht wird.
+publish.endpoints: Endpunkte
+publish.footer_add_column: Block hinzufügen
+publish.footer_add_link: Link hinzufügen
+publish.footer_block_title: Titel des Blocks
+publish.footer_bottom_links: Links rechts in der unteren Zeile
+publish.footer_copyright: Copyright ({year} wird durch das aktuelle Jahr ersetzt)
+publish.footer_link_text: Linktext
+publish.footer_text: Text neben dem unteren Logo
+publish.footer_title: Fußzeile
+publish.group_accent: Akzent
+publish.group_chrome: Kopf- und Fußzeile
+publish.group_layout: Typografie und Layout
+publish.group_methods: HTTP-Methoden
+publish.group_page: Seite
+publish.group_statuses: Antwortstatus
+publish.image_favicon: Favicon
+publish.image_link: Link (öffnet sich beim Klick)
+publish.image_logo_bottom: Unteres Logo
+publish.image_logo_top: Oberes Logo
+publish.image_none: Kein Bild
+publish.image_upload: Hochladen
+publish.images_hint: PNG, JPEG oder WebP bis 1 MB (das Favicon kann auch ICO sein). Speichern Sie zuerst den Stil, um Bilder hochzuladen.
+publish.images_title: Bilder
+publish.move_down: Nach unten
+publish.move_up: Nach oben
+publish.no: Nein
+publish.no_domains: Keine Domains
+publish.no_domains_yet: Noch keine Domains.
+publish.no_styles_yet: Noch keine Stile.
+publish.no_versions_yet: Auf dieser Domain sind noch keine Versionen veröffentlicht.
+publish.option_compact: Kompakt
+publish.option_inter: Inter
+publish.option_large: Groß
+publish.option_medium: Mittel
+publish.option_none: Keine
+publish.option_normal: Normal
+publish.option_roboto: Roboto
+publish.option_serif: Serif
+publish.option_small: Klein
+publish.option_source-sans: Source Sans
+publish.option_system: System
+publish.pages: Seiten
+publish.palette_delete: Palette löschen
+publish.palette_delete_confirm: Diese Palette löschen?
+publish.palette_name_title: Name der Palette
+publish.palette_presets: Vorlagen
+publish.palette_rename: Palette umbenennen
+publish.palette_save_new: Als Palette speichern
+publish.palette_saved: Gespeicherte Paletten
+publish.palette_scheme: Farbschema
+publish.palette_source: Ausgangspunkt
+publish.palette_title: Farben und Stil
+publish.palette_update: Änderungen in der Palette speichern
+publish.palette_update_confirm: Jeder Stil, der diese Palette verwendet, ändert sich. Fortfahren?
+publish.preview: Vorschau
+publish.preview_site: Ihre Website
+publish.remove_service: Service entfernen
+publish.remove_service_confirm: Diesen Service aus der veröffentlichten Version entfernen?
+publish.service: Service
+publish.service_content: Veröffentlicht
+publish.service_examples: Beispiele
+publish.service_overlay: Overlays
+publish.service_version: Service-Version
+publish.site_default_language: Standardsprache
+publish.site_description: Standardbeschreibung
+publish.site_languages: Sprachen (durch Komma getrennt, z. B. en, ru)
+publish.site_name: Name der Website
+publish.site_title: Website
+publish.status_building: Wird erstellt
+publish.status_error: Erstellung fehlgeschlagen
+publish.style: Stil
+publish.style_add: Stil hinzufügen
+publish.style_default: Standarddesign
+publish.style_delete_confirm: Diesen Stil löschen? Das lässt sich nicht rückgängig machen.
+publish.style_edit: Stil bearbeiten
+publish.style_name: Name
+publish.style_name_required: Geben Sie den Namen des Stils ein.
+publish.style_saved: Gespeichert.
+publish.styles: Stile und Marken
+publish.styles_hint: Farben, Logos und Fußzeilen der veröffentlichten Websites.
+publish.title: Veröffentlichung
+publish.token_accent: Akzent (Links, Schaltflächen)
+publish.token_accent_text: Text auf Akzent
+publish.token_bg: Seitenhintergrund
+publish.token_border: Rahmen
+publish.token_code_bg: Code-Hintergrund
+publish.token_content_width: Inhaltsbreite (px)
+publish.token_density: Dichte
+publish.token_font: Schriftart
+publish.token_font_size: Schriftgröße (px)
+publish.token_footer_bg: Hintergrund der Fußzeile
+publish.token_footer_text: Text der Fußzeile
+publish.token_header_bg: Hintergrund der Kopfzeile
+publish.token_header_text: Text der Kopfzeile
+publish.token_method_delete: DELETE
+publish.token_method_get: GET
+publish.token_method_patch: PATCH
+publish.token_method_post: POST
+publish.token_method_put: PUT
+publish.token_radius: Eckenradius
+publish.token_reset: Auf den Wert der Vorlage zurücksetzen
+publish.token_status_2xx: Status 2xx
+publish.token_status_4xx: Status 4xx
+publish.token_status_5xx: Status 5xx
+publish.token_surface: Flächen
+publish.token_text: Text
+publish.token_text_muted: Sekundärtext
+publish.version_add: Version hinzufügen
+publish.version_add_service: Service hinzufügen
+publish.version_add_services: Services hinzufügen
+publish.version_by: Veröffentlicht von
+publish.version_delete_confirm: Diese Version und ihre veröffentlichten Dateien löschen? Das lässt sich nicht rückgängig machen.
+publish.version_edit: Version
+publish.version_hidden: Ausgeblendet
+publish.version_hide: Ausblenden
+publish.version_locked_hint: "Die Parameter eines Services in einer veröffentlichten Version lassen sich nicht ändern: Entfernen Sie den Service und fügen Sie ihn erneut hinzu."
+publish.version_name: Name
+publish.version_name_required: Geben Sie den Namen der Version ein.
+publish.version_preview: Vorschau auf der Website
+publish.version_published: Veröffentlicht
+publish.version_services: Services
+publish.version_show: Einblenden
+publish.version_updated: Aktualisiert
+publish.versions: Versionen
+publish.versions_hint: Dokumentationsversionen, die auf der ausgewählten Domain veröffentlicht sind.
+publish.versions_no_domain: Wählen Sie zuerst in der oberen Leiste eine Domain aus.
+publish.yes: Ja
+site.deprecated: Veraltet
+site.errors: Fehler
+site.example_request: Anfragebeispiel
+site.example_response: Antwortbeispiel
+site.home: Startseite
+site.language: Sprache
+site.menu: Menü
+site.not_found: Seite nicht gefunden
+site.on_this_page: Auf dieser Seite
+site.parameters: Parameter
+site.preview_banner: Sie sehen die Vorschau einer ausgeblendeten Version
+site.request: Anfrage
+site.request_body: Request-Body
+site.responses: Antworten
+site.search_no_results: Nichts gefunden
+site.search_placeholder: Dokumentation durchsuchen
+site.theme_dark: Dunkel
+site.theme_light: Hell
+site.version: Version
+site.versions: Versionen
+publish.service_branch: Branch
+publish.header_height: Höhe der oberen Leiste, px (40–120)
+publish.header_links: Links der oberen Leiste (in einer Zeile, in dieser Reihenfolge)
+publish.header_title: Obere Leiste
+publish.option_always: Immer
+publish.option_hover: Beim Darüberfahren
+publish.token_footer_link: Links in der Fußzeile
+publish.token_footer_link_hover: Links in der Fußzeile beim Darüberfahren
+publish.token_header_link: Links der oberen Leiste
+publish.token_header_link_hover: Links der oberen Leiste beim Darüberfahren
+publish.token_link_underline: Unterstreichung von Links (obere Leiste und Fußzeile)
+publish.group_footer_links: Links in der Fußzeile
+publish.group_header_links: Links der oberen Leiste
+publish.option_bold: Fett
+publish.token_footer_link_size: Schriftgröße (px)
+publish.token_footer_link_underline: Unterstreichung
+publish.token_footer_link_weight: Schriftstärke
+publish.token_header_link_size: Schriftgröße (px)
+publish.token_header_link_underline: Unterstreichung
+publish.token_header_link_weight: Schriftstärke
+publish.option_underline: Unterstrichen
+publish.token_footer_link_hover_size: Schriftgröße beim Darüberfahren (px)
+publish.token_footer_link_hover_underline: Unterstreichung beim Darüberfahren
+publish.token_footer_link_hover_weight: Schriftstärke beim Darüberfahren
+publish.token_header_link_hover_size: Schriftgröße beim Darüberfahren (px)
+publish.token_header_link_hover_underline: Unterstreichung beim Darüberfahren
+publish.token_header_link_hover_weight: Schriftstärke beim Darüberfahren

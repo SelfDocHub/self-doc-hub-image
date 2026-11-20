@@ -1126,3 +1126,195 @@ license.autorenew_title: Renovação automática
 license.autorenew_token: Token de autorização
 license.autorenew_token_saved: Há um token salvo – deixe vazio para mantê-lo
 license.main_title: Licença
+button.publish: Publicação
+license.feature_publish: Publicação da documentação
+license.limit_max_publish_domains: Domínios de publicação
+license.limit_max_publish_versions_per_domain: Versões publicadas por domínio
+publish.back: Voltar à documentação
+publish.back_label: Documentação
+publish.back_to_styles: Voltar à lista
+publish.back_to_versions: Voltar à lista
+publish.contrast_warning: "Contraste baixo ({scheme}): {fg} sobre {bg} resulta em {ratio}:1; o recomendado é 4,5:1."
+publish.created_at: Criado
+publish.created_by: Criado por
+publish.domain: Domínio
+publish.domain_add: Adicionar domínio
+publish.domain_delete_confirm: Excluir este domínio junto com todas as versões publicadas nele? Esta ação não pode ser desfeita.
+publish.domain_edit: Editar domínio
+publish.domain_select: Domínio
+publish.domains: Domínios
+publish.domains_hint: Domínios nos quais a documentação é publicada.
+publish.endpoints: endpoints
+publish.footer_add_column: Adicionar bloco
+publish.footer_add_link: Adicionar link
+publish.footer_block_title: Título do bloco
+publish.footer_bottom_links: Links à direita da linha inferior
+publish.footer_copyright: Copyright ({year} é substituído pelo ano atual)
+publish.footer_link_text: Texto do link
+publish.footer_text: Texto ao lado do logotipo inferior
+publish.footer_title: Rodapé
+publish.group_accent: Destaque
+publish.group_chrome: Cabeçalho e rodapé
+publish.group_layout: Tipografia e layout
+publish.group_methods: Métodos HTTP
+publish.group_page: Página
+publish.group_statuses: Status de resposta
+publish.image_favicon: Favicon
+publish.image_link: Link (abre ao clicar)
+publish.image_logo_bottom: Logotipo inferior
+publish.image_logo_top: Logotipo superior
+publish.image_none: Sem imagem
+publish.image_upload: Enviar
+publish.images_hint: PNG, JPEG ou WebP de até 1 MB (o favicon também pode ser ICO). Salve primeiro o estilo para enviar imagens.
+publish.images_title: Imagens
+publish.move_down: Mover para baixo
+publish.move_up: Mover para cima
+publish.no: Não
+publish.no_domains: Sem domínios
+publish.no_domains_yet: Ainda não há domínios.
+publish.no_styles_yet: Ainda não há estilos.
+publish.no_versions_yet: Ainda não há versões publicadas neste domínio.
+publish.option_compact: Compacta
+publish.option_inter: Inter
+publish.option_large: Grande
+publish.option_medium: Médio
+publish.option_none: Nenhum
+publish.option_normal: Normal
+publish.option_roboto: Roboto
+publish.option_serif: Serif
+publish.option_small: Pequeno
+publish.option_source-sans: Source Sans
+publish.option_system: Sistema
+publish.pages: páginas
+publish.palette_delete: Excluir paleta
+publish.palette_delete_confirm: Excluir esta paleta?
+publish.palette_name_title: Nome da paleta
+publish.palette_presets: Predefinições
+publish.palette_rename: Renomear paleta
+publish.palette_save_new: Salvar como paleta
+publish.palette_saved: Paletas salvas
+publish.palette_scheme: Esquema de cores
+publish.palette_source: Começar a partir de
+publish.palette_title: Cores e estilo
+publish.palette_update: Salvar as alterações na paleta
+publish.palette_update_confirm: Todos os estilos que usam esta paleta serão alterados. Continuar?
+publish.preview: Pré-visualização
+publish.preview_site: Seu site
+publish.remove_service: Remover o serviço
+publish.remove_service_confirm: Remover este serviço da versão publicada?
+publish.service: Serviço
+publish.service_content: Publicado
+publish.service_examples: Exemplos
+publish.service_overlay: Overlays
+publish.service_version: Versão do serviço
+publish.site_default_language: Idioma padrão
+publish.site_description: Descrição padrão
+publish.site_languages: "Idiomas (separados por vírgula, ex.: en, ru)"
+publish.site_name: Nome do site
+publish.site_title: Site
+publish.status_building: Compilando
+publish.status_error: Falha na compilação
+publish.style: Estilo
+publish.style_add: Adicionar estilo
+publish.style_default: Aparência padrão
+publish.style_delete_confirm: Excluir este estilo? Esta ação não pode ser desfeita.
+publish.style_edit: Editar estilo
+publish.style_name: Nome
+publish.style_name_required: Informe o nome do estilo.
+publish.style_saved: Salvo.
+publish.styles: Estilos e marcas
+publish.styles_hint: Cores, logotipos e rodapés dos sites publicados.
+publish.title: Publicação
+publish.token_accent: Destaque (links, botões)
+publish.token_accent_text: Texto sobre o destaque
+publish.token_bg: Fundo da página
+publish.token_border: Bordas
+publish.token_code_bg: Fundo do código
+publish.token_content_width: Largura do conteúdo (px)
+publish.token_density: Densidade
+publish.token_font: Fonte
+publish.token_font_size: Tamanho da fonte (px)
+publish.token_footer_bg: Fundo do rodapé
+publish.token_footer_text: Texto do rodapé
+publish.token_header_bg: Fundo do cabeçalho
+publish.token_header_text: Texto do cabeçalho
+publish.token_method_delete: DELETE
+publish.token_method_get: GET
+publish.token_method_patch: PATCH
+publish.token_method_post: POST
+publish.token_method_put: PUT
+publish.token_radius: Raio dos cantos
+publish.token_reset: Redefinir para o valor da predefinição
+publish.token_status_2xx: Status 2xx
+publish.token_status_4xx: Status 4xx
+publish.token_status_5xx: Status 5xx
+publish.token_surface: Painéis
+publish.token_text: Texto
+publish.token_text_muted: Texto secundário
+publish.version_add: Adicionar versão
+publish.version_add_service: Adicionar um serviço
+publish.version_add_services: Adicionar serviços
+publish.version_by: Publicada por
+publish.version_delete_confirm: Excluir esta versão e seus arquivos publicados? Esta ação não pode ser desfeita.
+publish.version_edit: Versão
+publish.version_hidden: Oculta
+publish.version_hide: Ocultar
+publish.version_locked_hint: "Os parâmetros de um serviço em uma versão publicada não podem ser alterados: remova o serviço e adicione-o novamente."
+publish.version_name: Nome
+publish.version_name_required: Informe o nome da versão.
+publish.version_preview: Pré-visualização no site
+publish.version_published: Publicada
+publish.version_services: Serviços
+publish.version_show: Mostrar
+publish.version_updated: Atualizada
+publish.versions: Versões
+publish.versions_hint: Versões da documentação publicadas no domínio selecionado.
+publish.versions_no_domain: Escolha primeiro um domínio na barra superior.
+publish.yes: Sim
+site.deprecated: Obsoleto
+site.errors: Erros
+site.example_request: Exemplo de requisição
+site.example_response: Exemplo de resposta
+site.home: Início
+site.language: Idioma
+site.menu: Menu
+site.not_found: Página não encontrada
+site.on_this_page: Nesta página
+site.parameters: Parâmetros
+site.preview_banner: Você está vendo a pré-visualização de uma versão oculta
+site.request: Requisição
+site.request_body: Corpo da requisição
+site.responses: Respostas
+site.search_no_results: Nada encontrado
+site.search_placeholder: Buscar na documentação
+site.theme_dark: Escuro
+site.theme_light: Claro
+site.version: Versão
+site.versions: Versões
+publish.service_branch: Branch
+publish.header_height: Altura da barra superior, px (40-120)
+publish.header_links: Links da barra superior (exibidos em uma linha, nesta ordem)
+publish.header_title: Barra superior
+publish.option_always: Sempre
+publish.option_hover: Ao passar o mouse
+publish.token_footer_link: Links do rodapé
+publish.token_footer_link_hover: Links do rodapé ao passar o mouse
+publish.token_header_link: Links da barra superior
+publish.token_header_link_hover: Links da barra superior ao passar o mouse
+publish.token_link_underline: Sublinhado dos links (barra superior e rodapé)
+publish.group_footer_links: Links do rodapé
+publish.group_header_links: Links da barra superior
+publish.option_bold: Negrito
+publish.token_footer_link_size: Tamanho da fonte (px)
+publish.token_footer_link_underline: Sublinhado
+publish.token_footer_link_weight: Peso da fonte
+publish.token_header_link_size: Tamanho da fonte (px)
+publish.token_header_link_underline: Sublinhado
+publish.token_header_link_weight: Peso da fonte
+publish.option_underline: Sublinhado
+publish.token_footer_link_hover_size: Tamanho da fonte ao passar o mouse (px)
+publish.token_footer_link_hover_underline: Sublinhado ao passar o mouse
+publish.token_footer_link_hover_weight: Peso da fonte ao passar o mouse
+publish.token_header_link_hover_size: Tamanho da fonte ao passar o mouse (px)
+publish.token_header_link_hover_underline: Sublinhado ao passar o mouse
+publish.token_header_link_hover_weight: Peso da fonte ao passar o mouse

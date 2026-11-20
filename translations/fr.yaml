@@ -1126,3 +1126,195 @@ license.autorenew_title: Renouvellement automatique
 license.autorenew_token: Token d'autorisation
 license.autorenew_token_saved: "Un token est enregistré : laissez vide pour le conserver"
 license.main_title: Licence
+button.publish: Publication
+license.feature_publish: Publication de la documentation
+license.limit_max_publish_domains: Domaines de publication
+license.limit_max_publish_versions_per_domain: Versions publiées par domaine
+publish.back: Retour à la documentation
+publish.back_label: Documentation
+publish.back_to_styles: Retour à la liste
+publish.back_to_versions: Retour à la liste
+publish.contrast_warning: "Contraste faible ({scheme}) : {fg} sur {bg} donne {ratio}:1, 4,5:1 est recommandé."
+publish.created_at: Créé
+publish.created_by: Créé par
+publish.domain: Domaine
+publish.domain_add: Ajouter un domaine
+publish.domain_delete_confirm: Supprimer ce domaine avec toutes les versions publiées dessus ? Cette action est irréversible.
+publish.domain_edit: Modifier le domaine
+publish.domain_select: Domaine
+publish.domains: Domaines
+publish.domains_hint: Domaines sur lesquels la documentation est publiée.
+publish.endpoints: endpoints
+publish.footer_add_column: Ajouter un bloc
+publish.footer_add_link: Ajouter un lien
+publish.footer_block_title: Titre du bloc
+publish.footer_bottom_links: Liens à droite de la ligne du bas
+publish.footer_copyright: Copyright ({year} est remplacé par l'année en cours)
+publish.footer_link_text: Texte du lien
+publish.footer_text: Texte à côté du logo du bas
+publish.footer_title: Pied de page
+publish.group_accent: Accent
+publish.group_chrome: En-tête et pied de page
+publish.group_layout: Typographie et mise en page
+publish.group_methods: Méthodes HTTP
+publish.group_page: Page
+publish.group_statuses: Statuts de réponse
+publish.image_favicon: Favicon
+publish.image_link: Lien (s'ouvre au clic)
+publish.image_logo_bottom: Logo du bas
+publish.image_logo_top: Logo du haut
+publish.image_none: Aucune image
+publish.image_upload: Téléverser
+publish.images_hint: PNG, JPEG ou WebP jusqu'à 1 Mo (le favicon peut aussi être en ICO). Enregistrez d'abord le style pour téléverser des images.
+publish.images_title: Images
+publish.move_down: Descendre
+publish.move_up: Monter
+publish.no: Non
+publish.no_domains: Aucun domaine
+publish.no_domains_yet: Aucun domaine pour le moment.
+publish.no_styles_yet: Aucun style pour le moment.
+publish.no_versions_yet: Aucune version publiée sur ce domaine pour le moment.
+publish.option_compact: Compact
+publish.option_inter: Inter
+publish.option_large: Grand
+publish.option_medium: Moyen
+publish.option_none: Aucun
+publish.option_normal: Normal
+publish.option_roboto: Roboto
+publish.option_serif: Serif
+publish.option_small: Petit
+publish.option_source-sans: Source Sans
+publish.option_system: Système
+publish.pages: pages
+publish.palette_delete: Supprimer la palette
+publish.palette_delete_confirm: Supprimer cette palette ?
+publish.palette_name_title: Nom de la palette
+publish.palette_presets: Préréglages
+publish.palette_rename: Renommer la palette
+publish.palette_save_new: Enregistrer comme palette
+publish.palette_saved: Palettes enregistrées
+publish.palette_scheme: Schéma de couleurs
+publish.palette_source: Partir de
+publish.palette_title: Couleurs et style
+publish.palette_update: Enregistrer les modifications de la palette
+publish.palette_update_confirm: Tous les styles qui utilisent cette palette seront modifiés. Continuer ?
+publish.preview: Aperçu
+publish.preview_site: Votre site
+publish.remove_service: Retirer le service
+publish.remove_service_confirm: Retirer ce service de la version publiée ?
+publish.service: Service
+publish.service_content: Publié
+publish.service_examples: Exemples
+publish.service_overlay: Overlays
+publish.service_version: Version du service
+publish.site_default_language: Langue par défaut
+publish.site_description: Description par défaut
+publish.site_languages: Langues (séparées par des virgules, p. ex. en, ru)
+publish.site_name: Nom du site
+publish.site_title: Site
+publish.status_building: Construction en cours
+publish.status_error: Échec de la construction
+publish.style: Style
+publish.style_add: Ajouter un style
+publish.style_default: Apparence par défaut
+publish.style_delete_confirm: Supprimer ce style ? Cette action est irréversible.
+publish.style_edit: Modifier le style
+publish.style_name: Nom
+publish.style_name_required: Saisissez le nom du style.
+publish.style_saved: Enregistré.
+publish.styles: Styles et marques
+publish.styles_hint: Couleurs, logos et pieds de page des sites publiés.
+publish.title: Publication
+publish.token_accent: Accent (liens, boutons)
+publish.token_accent_text: Texte sur l'accent
+publish.token_bg: Arrière-plan de la page
+publish.token_border: Bordures
+publish.token_code_bg: Arrière-plan du code
+publish.token_content_width: Largeur du contenu (px)
+publish.token_density: Densité
+publish.token_font: Police
+publish.token_font_size: Taille de police (px)
+publish.token_footer_bg: Arrière-plan du pied de page
+publish.token_footer_text: Texte du pied de page
+publish.token_header_bg: Arrière-plan de l'en-tête
+publish.token_header_text: Texte de l'en-tête
+publish.token_method_delete: DELETE
+publish.token_method_get: GET
+publish.token_method_patch: PATCH
+publish.token_method_post: POST
+publish.token_method_put: PUT
+publish.token_radius: Rayon des angles
+publish.token_reset: Rétablir la valeur du préréglage
+publish.token_status_2xx: Statut 2xx
+publish.token_status_4xx: Statut 4xx
+publish.token_status_5xx: Statut 5xx
+publish.token_surface: Panneaux
+publish.token_text: Texte
+publish.token_text_muted: Texte secondaire
+publish.version_add: Ajouter une version
+publish.version_add_service: Ajouter un service
+publish.version_add_services: Ajouter des services
+publish.version_by: Publiée par
+publish.version_delete_confirm: Supprimer cette version et ses fichiers publiés ? Cette action est irréversible.
+publish.version_edit: Version
+publish.version_hidden: Masquée
+publish.version_hide: Masquer
+publish.version_locked_hint: "Les paramètres d'un service dans une version publiée ne peuvent pas être modifiés : retirez le service puis ajoutez-le à nouveau."
+publish.version_name: Nom
+publish.version_name_required: Saisissez le nom de la version.
+publish.version_preview: Aperçu sur le site
+publish.version_published: Publiée
+publish.version_services: Services
+publish.version_show: Afficher
+publish.version_updated: Mise à jour
+publish.versions: Versions
+publish.versions_hint: Versions de la documentation publiées sur le domaine sélectionné.
+publish.versions_no_domain: Choisissez d'abord un domaine dans la barre du haut.
+publish.yes: Oui
+site.deprecated: Obsolète
+site.errors: Erreurs
+site.example_request: Exemple de requête
+site.example_response: Exemple de réponse
+site.home: Accueil
+site.language: Langue
+site.menu: Menu
+site.not_found: Page introuvable
+site.on_this_page: Sur cette page
+site.parameters: Paramètres
+site.preview_banner: Vous consultez l'aperçu d'une version masquée
+site.request: Requête
+site.request_body: Corps de la requête
+site.responses: Réponses
+site.search_no_results: Aucun résultat
+site.search_placeholder: Rechercher dans la documentation
+site.theme_dark: Sombre
+site.theme_light: Clair
+site.version: Version
+site.versions: Versions
+publish.service_branch: Branche
+publish.header_height: Hauteur de la barre du haut, px (40-120)
+publish.header_links: Liens de la barre du haut (affichés sur une ligne, dans cet ordre)
+publish.header_title: Barre du haut
+publish.option_always: Toujours
+publish.option_hover: Au survol
+publish.token_footer_link: Liens du pied de page
+publish.token_footer_link_hover: Liens du pied de page au survol
+publish.token_header_link: Liens de la barre du haut
+publish.token_header_link_hover: Liens de la barre du haut au survol
+publish.token_link_underline: Soulignement des liens (barre du haut et pied de page)
+publish.group_footer_links: Liens du pied de page
+publish.group_header_links: Liens de la barre du haut
+publish.option_bold: Gras
+publish.token_footer_link_size: Taille de police (px)
+publish.token_footer_link_underline: Soulignement
+publish.token_footer_link_weight: Graisse de police
+publish.token_header_link_size: Taille de police (px)
+publish.token_header_link_underline: Soulignement
+publish.token_header_link_weight: Graisse de police
+publish.option_underline: Souligné
+publish.token_footer_link_hover_size: Taille de police au survol (px)
+publish.token_footer_link_hover_underline: Soulignement au survol
+publish.token_footer_link_hover_weight: Graisse de police au survol
+publish.token_header_link_hover_size: Taille de police au survol (px)
+publish.token_header_link_hover_underline: Soulignement au survol
+publish.token_header_link_hover_weight: Graisse de police au survol

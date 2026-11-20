@@ -1133,3 +1133,195 @@ license.autorenew_title: Автоматическое обновление
 license.autorenew_token: Токен авторизации
 license.autorenew_token_saved: Токен сохранен — оставьте поле пустым, чтобы сохранить его
 license.main_title: Лицензия
+button.publish: Публикация
+license.feature_publish: Публикация документации
+license.limit_max_publish_domains: Домены публикации
+license.limit_max_publish_versions_per_domain: Количество опубликованных версий на один домен
+publish.back: Вернуться к документации
+publish.back_label: Документация
+publish.back_to_styles: Вернуться к списку
+publish.back_to_versions: Вернуться к списку
+publish.contrast_warning: «Низкая контрастность ({scheme}): {fg} на {bg} составляет {ratio}:1, рекомендуется 4,5:1.»
+publish.created_at: Создано
+publish.created_by: Создано
+publish.domain: Домен
+publish.domain_add: Добавить домен
+publish.domain_delete_confirm: Удалить этот домен вместе со всеми опубликованными на нём версиями? Это действие нельзя отменить.
+publish.domain_edit: Редактировать домен
+publish.domain_select: Домен
+publish.domains: Домены
+publish.domains_hint: Домены, на которых опубликована документация.
+publish.endpoints: конечные точки
+publish.footer_add_column: Добавить блок
+publish.footer_add_link: Добавить ссылку
+publish.footer_block_title: Заголовок блока
+publish.footer_bottom_links: Ссылки справа в нижней строке
+publish.footer_copyright: Авторские права ({year} заменяется текущим годом)
+publish.footer_link_text: Текст ссылки
+publish.footer_text: Текст рядом с логотипом внизу
+publish.footer_title: Нижний колонтитул
+publish.group_accent: Акцент
+publish.group_chrome: Верхний и нижний колонтитулы
+publish.group_layout: Типографика и верстка
+publish.group_methods: Методы HTTP
+publish.group_page: Страница
+publish.group_statuses: Статусы ответа
+publish.image_favicon: Фавикон
+publish.image_link: Ссылка (открывается при нажатии)
+publish.image_logo_bottom: Нижний логотип
+publish.image_logo_top: Верхний логотип
+publish.image_none: Без изображения
+publish.image_upload: Загрузить
+publish.images_hint: PNG, JPEG или WebP размером до 1 МБ (фавикон также может быть в формате ICO). Сначала сохраните стиль, чтобы загрузить изображения.
+publish.images_title: Изображения
+publish.move_down: Сдвинуть вниз
+publish.move_up: Сдвинуть вверх
+publish.no: Нет
+publish.no_domains: Доменов нет
+publish.no_domains_yet: Доменов пока нет.
+publish.no_styles_yet: Стилей пока нет.
+publish.no_versions_yet: На этом домене пока не опубликовано ни одной версии.
+publish.option_compact: Компактный
+publish.option_inter: Inter
+publish.option_large: Крупный
+publish.option_medium: Средний
+publish.option_none: Нет
+publish.option_normal: Нормальный
+publish.option_roboto: Roboto
+publish.option_serif: Serif
+publish.option_small: Малый
+publish.option_source-sans: Source Sans
+publish.option_system: Системный
+publish.pages: страницы
+publish.palette_delete: Удалить палитру
+publish.palette_delete_confirm: Удалить эту палитру?
+publish.palette_name_title: Название палитры
+publish.palette_presets: Предустановки
+publish.palette_rename: Переименовать палитру
+publish.palette_save_new: Сохранить как палитру
+publish.palette_saved: Сохраненные палитры
+publish.palette_scheme: Цветовая схема
+publish.palette_source: Начать с
+publish.palette_title: Цвета и стиль
+publish.palette_update: Сохранить изменения в палитре
+publish.palette_update_confirm: Все стили, использующие эту палитру, изменятся. Продолжить?
+publish.preview: Предварительный просмотр
+publish.preview_site: Ваш сайт
+publish.remove_service: Удалить сервис
+publish.remove_service_confirm: Удалить этот сервис из опубликованной версии?
+publish.service: Сервис
+publish.service_content: Опубликовано
+publish.service_examples: Примеры
+publish.service_overlay: Наложения
+publish.service_version: Версия сервиса
+publish.site_default_language: Язык по умолчанию
+publish.site_description: Описание по умолчанию
+publish.site_languages: Языки (разделены запятыми, например, en, ru)
+publish.site_name: Название сайта
+publish.site_title: Сайт
+publish.status_building: Создание
+publish.status_error: Сбой при создании
+publish.style: Стиль
+publish.style_add: Добавить стиль
+publish.style_default: Внешний вид по умолчанию
+publish.style_delete_confirm: Удалить этот стиль? Это действие нельзя отменить.
+publish.style_edit: Редактировать стиль
+publish.style_name: Название
+publish.style_name_required: Введите название стиля.
+publish.style_saved: Сохранено.
+publish.styles: Стили и бренды
+publish.styles_hint: Цвета, логотипы и нижние колонтитулы опубликованных сайтов.
+publish.title: Публикация
+publish.token_accent: Акцент (ссылки, кнопки)
+publish.token_accent_text: Текст на акценте
+publish.token_bg: Фон страницы
+publish.token_border: Рамки
+publish.token_code_bg: Фон кода
+publish.token_content_width: Ширина контента (px)
+publish.token_density: Плотность
+publish.token_font: Шрифт
+publish.token_font_size: Размер шрифта (px)
+publish.token_footer_bg: Фон нижнего колонтитула
+publish.token_footer_text: Текст нижнего колонтитула
+publish.token_header_bg: Фон верхнего колонтитула
+publish.token_header_text: Текст верхнего колонтитула
+publish.token_method_delete: DELETE
+publish.token_method_get: GET
+publish.token_method_patch: PATCH
+publish.token_method_post: POST
+publish.token_method_put: PUT
+publish.token_radius: Радиус углов
+publish.token_reset: Сброс до заданного значения
+publish.token_status_2xx: Статус 2xx
+publish.token_status_4xx: Статус 4xx
+publish.token_status_5xx: Статус 5xx
+publish.token_surface: Панели
+publish.token_text: Текст
+publish.token_text_muted: Вторичный текст
+publish.version_add: Добавить версию
+publish.version_add_service: Добавить сервис
+publish.version_add_services: Добавить сервисы
+publish.version_by: Опубликовано
+publish.version_delete_confirm: Удалить эту версию и опубликованные в ней файлы? Это действие нельзя отменить.
+publish.version_edit: Версия
+publish.version_hidden: Скрыто
+publish.version_hide: Скрыть
+publish.version_locked_hint: «Параметры сервиса в опубликованной версии нельзя изменить: удалите сервис и добавьте его заново».
+publish.version_name: Название
+publish.version_name_required: Введите название версии.
+publish.version_preview: Предварительный просмотр на сайте
+publish.version_published: Опубликовано
+publish.version_services: Сервисы
+publish.version_show: Показать
+publish.version_updated: Обновлено
+publish.versions: Версии
+publish.versions_hint: Версии документации, опубликованные на выбранном домене.
+publish.versions_no_domain: Сначала выберите домен в верхней панели.
+publish.yes: Да
+site.deprecated: Устарело
+site.errors: Ошибки
+site.example_request: Пример запроса
+site.example_response: Пример ответа
+site.home: Главная
+site.language: Язык
+site.menu: Меню
+site.not_found: Страница не найдена
+site.on_this_page: На этой странице
+site.parameters: Параметры
+site.preview_banner: Вы просматриваете предварительный просмотр скрытой версии
+site.request: Запрос
+site.request_body: Тело запроса
+site.responses: Ответы
+site.search_no_results: Ничего не найдено
+site.search_placeholder: Поиск в документации
+site.theme_dark: Тёмная тема
+site.theme_light: Светлая тема
+site.version: Версия
+site.versions: Версии
+publish.service_branch: Ветка
+publish.header_height: Высота верхней панели, пикселей (40–120)
+publish.header_links: Ссылки верхней панели (отображаются в одной строке в указанном порядке)
+publish.header_title: Верхняя панель
+publish.option_always: Всегда
+publish.option_hover: При наведении курсора
+publish.token_footer_link: Ссылки в нижнем колонтитуле
+publish.token_footer_link_hover: Ссылки в нижнем колонтитуле при наведении курсора
+publish.token_header_link: Ссылки в верхней панели
+publish.token_header_link_hover: Ссылки в верхней панели при наведении курсора
+publish.token_link_underline: Подчёркивание ссылок (верхняя панель и нижний колонтитул)
+publish.group_footer_links: Ссылки в нижнем колонтитуле
+publish.group_header_links: Ссылки в верхней панели
+publish.option_bold: Жирный шрифт
+publish.token_footer_link_size: Размер шрифта (px)
+publish.token_footer_link_underline: Подчёркивание
+publish.token_footer_link_weight: Начертание шрифта
+publish.token_header_link_size: Размер шрифта (px)
+publish.token_header_link_underline: Подчеркивание
+publish.token_header_link_weight: Насыщенность шрифта
+publish.option_underline: Подчеркнуто
+publish.token_footer_link_hover_size: Размер шрифта при наведении курсора (px)
+publish.token_footer_link_hover_underline: Подчеркивание при наведении курсора
+publish.token_footer_link_hover_weight: Насыщенность шрифта при наведении курсора
+publish.token_header_link_hover_size: Размер шрифта при наведении курсора (px)
+publish.token_header_link_hover_underline: Подчёркивание при наведении курсора
+publish.token_header_link_hover_weight: Насыщенность шрифта при наведении курсора
