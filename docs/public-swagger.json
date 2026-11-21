@@ -1,0 +1,1147 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Read-only API of the public documentation sites. No sign-in is needed. Every request names the\ndomain the site runs on in the X-Public-Domain header and only gets what is published on that domain:\nthe style and branding of the site and the published versions of the documentation, as small\nready-to-render files. An unknown domain, a hidden version and a missing file all answer the same 404.",
+        "title": "docs-hub public API",
+        "contact": {},
+        "version": "1.0.0"
+    },
+    "basePath": "/",
+    "paths": {
+        "/public/v1/branding/{kind}": {
+            "get": {
+                "description": "The top logo (logo_top), the bottom logo (logo_bottom) or the favicon (favicon) of the domain's style.",
+                "produces": [
+                    "application/octet-stream"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "A picture of the site's branding",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "logo_top, logo_bottom or favicon",
+                        "name": "kind",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/i18n/{lang}": {
+            "get": {
+                "description": "Returns the texts of the site's interface (keys \"site.*\") and the captions generated in the\ndocumentation (keys \"export.doc.*\") in one of the languages of the site.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "Interface texts of the site",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "A language of the site",
+                        "name": "lang",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/site": {
+            "get": {
+                "description": "Returns the texts, languages, final design tokens (light and dark scheme), branding, top bar, footer and the\nlist of published versions of the domain named in X-Public-Domain. The first version is the default one.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "The site of the domain",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token that adds a hidden version to the list",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.SiteResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/versions/{version}/assets/{asset}": {
+            "get": {
+                "description": "Served with its verified type, nosniff and a policy that forbids scripts. The name carries the hash of\nthe content, so the picture can be cached for a long time.",
+                "produces": [
+                    "application/octet-stream"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "A picture of a text page",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID",
+                        "name": "version",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "File name from a page",
+                        "name": "asset",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/versions/{version}/endpoints/{id}": {
+            "get": {
+                "description": "Returns the file of the endpoint: description, parameters, request body, responses, errors and examples\n(when the service publishes them), with the overlays chosen for the version already applied.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "One endpoint of a version",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID",
+                        "name": "version",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Node ID from the tree",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publish.PEndpoint"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/versions/{version}/pages/{id}": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "One text page of a version",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID",
+                        "name": "version",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Node ID from the tree",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publish.PPage"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/versions/{version}/search": {
+            "get": {
+                "description": "A simple search over the titles, methods, paths and first lines of the endpoints and pages of one\nversion. Every word of the query must occur; titles rank before paths, paths before descriptions.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "Search a version",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID",
+                        "name": "version",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "The words to look for (at least 2 characters)",
+                        "name": "q",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "integer",
+                        "description": "At most this many results (default 30, at most 100)",
+                        "name": "limit",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.SearchResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/versions/{version}/sitemap": {
+            "get": {
+                "description": "Lists every endpoint and page of the version with the time the version was last changed.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "The pages of a version for a sitemap",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID",
+                        "name": "version",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.SitemapResponse"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/versions/{version}/tree": {
+            "get": {
+                "description": "Returns the manifest of the version: its services and, for each, the tree of folders, tags, endpoints\nand pages in the order of the left menu of the documentation.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "The menu of a version",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID",
+                        "name": "version",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publish.Manifest"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "publicapi.ErrorResponse": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "type": "string"
+                }
+            }
+        },
+        "publicapi.SearchResponse": {
+            "type": "object",
+            "properties": {
+                "query": {
+                    "type": "string"
+                },
+                "results": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.SearchEntry"
+                    }
+                },
+                "total": {
+                    "type": "integer"
+                }
+            }
+        },
+        "publicapi.SiteBrand": {
+            "type": "object",
+            "properties": {
+                "favicon": {
+                    "$ref": "#/definitions/publicapi.SiteImage"
+                },
+                "logo_bottom": {
+                    "$ref": "#/definitions/publicapi.SiteImage"
+                },
+                "logo_top": {
+                    "$ref": "#/definitions/publicapi.SiteImage"
+                }
+            }
+        },
+        "publicapi.SiteImage": {
+            "type": "object",
+            "properties": {
+                "content_type": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "publicapi.SiteResponse": {
+            "type": "object",
+            "properties": {
+                "brand": {
+                    "$ref": "#/definitions/publicapi.SiteBrand"
+                },
+                "default_language": {
+                    "type": "string"
+                },
+                "default_version": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "domain": {
+                    "type": "string"
+                },
+                "footer": {
+                    "$ref": "#/definitions/publish.Footer"
+                },
+                "header": {
+                    "$ref": "#/definitions/publish.Header"
+                },
+                "languages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "tokens": {
+                    "$ref": "#/definitions/publish.Tokens"
+                },
+                "versions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publicapi.SiteVersion"
+                    }
+                }
+            }
+        },
+        "publicapi.SiteVersion": {
+            "type": "object",
+            "properties": {
+                "hidden": {
+                    "description": "Hidden is true only for a hidden version opened with a preview token.",
+                    "type": "boolean"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "publicapi.SitemapResponse": {
+            "type": "object",
+            "properties": {
+                "entries": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.SearchEntry"
+                    }
+                },
+                "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.Footer": {
+            "type": "object",
+            "properties": {
+                "columns": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.FooterColumn"
+                    }
+                },
+                "copyright": {
+                    "type": "string"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.FooterLink"
+                    }
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.FooterColumn": {
+            "type": "object",
+            "properties": {
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.FooterLink"
+                    }
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.FooterLink": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.Header": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "integer"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.HeaderLink"
+                    }
+                }
+            }
+        },
+        "publish.HeaderLink": {
+            "type": "object",
+            "properties": {
+                "text": {
+                    "type": "string"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.Manifest": {
+            "type": "object",
+            "properties": {
+                "built_at": {
+                    "type": "string"
+                },
+                "format": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "services": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.ManifestService"
+                    }
+                }
+            }
+        },
+        "publish.ManifestNode": {
+            "type": "object",
+            "properties": {
+                "children": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.ManifestNode"
+                    }
+                },
+                "deprecated": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PBlock"
+                    }
+                },
+                "format": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "kind": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.ManifestService": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PBlock"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                },
+                "spec_version": {
+                    "type": "string"
+                },
+                "tree": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.ManifestNode"
+                    }
+                },
+                "version_date": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.PBlock": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "depth": {
+                    "type": "integer"
+                },
+                "image": {
+                    "$ref": "#/definitions/publish.PImage"
+                },
+                "indent": {
+                    "type": "integer"
+                },
+                "inlines": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PInline"
+                    }
+                },
+                "kind": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "integer"
+                },
+                "number": {
+                    "type": "integer"
+                },
+                "ordered": {
+                    "type": "boolean"
+                },
+                "quote": {
+                    "type": "integer"
+                },
+                "rows": {
+                    "type": "array",
+                    "items": {
+                        "type": "array",
+                        "items": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/publish.PInline"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "publish.PEndpoint": {
+            "type": "object",
+            "properties": {
+                "deprecated": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PBlock"
+                    }
+                },
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PError"
+                    }
+                },
+                "format": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "parameters": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PParameter"
+                    }
+                },
+                "parameters_label": {
+                    "description": "ParametersLabel and ResponseLabel are i18n keys that override the usual captions (AsyncAPI).",
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "request_body": {
+                    "$ref": "#/definitions/publish.PRequestBody"
+                },
+                "request_example": {
+                    "description": "RequestExample and ResponseExample are pretty-printed JSON; empty unless the service publishes examples.",
+                    "type": "string"
+                },
+                "response_example": {
+                    "type": "string"
+                },
+                "response_label": {
+                    "type": "string"
+                },
+                "responses": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PResponse"
+                    }
+                },
+                "service": {
+                    "type": "string"
+                },
+                "summary": {
+                    "description": "Summary is the first line of the description, ready for a page's meta description.",
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.PError": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.PField": {
+            "type": "object",
+            "properties": {
+                "depth": {
+                    "type": "integer"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.PImage": {
+            "type": "object",
+            "properties": {
+                "alt": {
+                    "type": "string"
+                },
+                "asset": {
+                    "type": "string"
+                },
+                "content_type": {
+                    "type": "string"
+                },
+                "height": {
+                    "type": "integer"
+                },
+                "width": {
+                    "type": "integer"
+                }
+            }
+        },
+        "publish.PInline": {
+            "type": "object",
+            "properties": {
+                "bold": {
+                    "type": "boolean"
+                },
+                "code": {
+                    "type": "boolean"
+                },
+                "italic": {
+                    "type": "boolean"
+                },
+                "link": {
+                    "type": "string"
+                },
+                "strike": {
+                    "type": "boolean"
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.PPage": {
+            "type": "object",
+            "properties": {
+                "blocks": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PBlock"
+                    }
+                },
+                "id": {
+                    "type": "string"
+                },
+                "service": {
+                    "type": "string"
+                },
+                "summary": {
+                    "description": "Summary is the first line of the page, ready for a page's meta description.",
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.PParameter": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "in": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.PRequestBody": {
+            "type": "object",
+            "properties": {
+                "content_type": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PBlock"
+                    }
+                },
+                "fields": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PField"
+                    }
+                }
+            }
+        },
+        "publish.PResponse": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "content_type": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "fields": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.PField"
+                    }
+                }
+            }
+        },
+        "publish.SearchEntry": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "kind": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "service": {
+                    "type": "string"
+                },
+                "summary": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.Tokens": {
+            "type": "object",
+            "properties": {
+                "content_width": {
+                    "type": "integer"
+                },
+                "dark": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "density": {
+                    "type": "string"
+                },
+                "font": {
+                    "type": "string"
+                },
+                "font_size": {
+                    "type": "integer"
+                },
+                "footer_link_hover_size": {
+                    "type": "integer"
+                },
+                "footer_link_hover_underline": {
+                    "type": "string"
+                },
+                "footer_link_hover_weight": {
+                    "type": "string"
+                },
+                "footer_link_size": {
+                    "type": "integer"
+                },
+                "footer_link_underline": {
+                    "type": "string"
+                },
+                "footer_link_weight": {
+                    "type": "string"
+                },
+                "header_link_hover_size": {
+                    "type": "integer"
+                },
+                "header_link_hover_underline": {
+                    "type": "string"
+                },
+                "header_link_hover_weight": {
+                    "type": "string"
+                },
+                "header_link_size": {
+                    "type": "integer"
+                },
+                "header_link_underline": {
+                    "description": "The style of the links of the top bar (header) and of the footer: underline, weight and size in pixels, in the\nnormal state and when the pointer is over the link (hover).",
+                    "type": "string"
+                },
+                "header_link_weight": {
+                    "type": "string"
+                },
+                "light": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "radius": {
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "description": "Published documentation",
+            "name": "public"
+        }
+    ]
+}
