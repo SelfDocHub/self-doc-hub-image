@@ -1318,3 +1318,69 @@ publish.token_footer_link_hover_weight: Graisse de police au survol
 publish.token_header_link_hover_size: Taille de police au survol (px)
 publish.token_header_link_hover_underline: Soulignement au survol
 publish.token_header_link_hover_weight: Graisse de police au survol
+mcp.enable_overlay_write_label: "Overlays : modifier les descriptions"
+mcp.enable_page_write_label: "Pages de texte : créer et modifier"
+mcp.enable_structure_write_label: "Structure : déplacer des tags et des endpoints entre les dossiers"
+mcp.group_write: Écriture (modifie la documentation)
+mcp.overlay_write_warning: L'IA peut remplacer les descriptions des services, des tags, des endpoints et des champs des requêtes et des réponses. Les modifications sont publiées immédiatement et enregistrées dans l'historique sous le nom de l'IA.
+mcp.page_write_warning: L'IA peut créer des pages de texte et modifier le texte des pages existantes. Les modifications sont publiées immédiatement et enregistrées dans l'historique de la page sous le nom de l'IA.
+mcp.structure_write_warning: L'IA peut déplacer des tags et des endpoints entre les dossiers, ce qui modifie la navigation du service pour chaque lecteur.
+mcp.write_warning_title: Accès potentiellement dangereux.
+publish.back_to_seo: Retour à la liste
+publish.lang_add: Ajouter une langue
+publish.lang_code: Code (en, ru, pt-BR)
+publish.lang_copy: Copier depuis la langue par défaut
+publish.lang_copy_confirm: Remplacer le contenu de cette langue par celui de la langue par défaut ?
+publish.lang_default: Par défaut
+publish.lang_delete_confirm: Supprimer cette langue ? Ses textes, ses liens et son pied de page seront perdus.
+publish.lang_incomplete: Non renseigné
+publish.lang_name: Nom de la langue
+publish.no_seo_yet: Aucun SEO pour le moment.
+publish.seo: SEO
+publish.seo_add: Ajouter un SEO
+publish.seo_codes: Vérification et compteurs
+publish.seo_codes_hint: "Seuls les codes et les identifiants sont enregistrés : le site génère lui-même les balises de vérification et connecte les compteurs, aucun script ne peut être ajouté ici."
+publish.seo_default: Valeurs par défaut
+publish.seo_delete_confirm: Supprimer ce SEO ? Cette action est irréversible.
+publish.seo_description: Description
+publish.seo_edit: Modifier le SEO
+publish.seo_ga: ID Google Analytics (G-XXXXXXXXXX)
+publish.seo_keywords: Mots-clés (séparés par des virgules)
+publish.seo_languages: Langues
+publish.seo_languages_hint: Le site s'ouvre dans la langue par défaut ; les autres langues sont choisies par le lecteur. Les textes, la barre du haut et le pied de page ci-dessous sont renseignés pour chaque langue.
+publish.seo_llms: Fichiers pour les modèles de langage (llms.txt)
+publish.seo_llms_enabled: Publier llms.txt et llms-full.txt
+publish.seo_llms_hint: Le site sert /llms.txt (un court guide de la documentation avec des liens) et /llms-full.txt (la version complète en Markdown, jusqu'à 2 Mio). Le titre et la description proviennent des textes de la langue ; l'introduction ci-dessous les suit.
+publish.seo_llms_intro: Introduction (affichée après la description)
+publish.seo_name_required: Saisissez le nom du SEO.
+publish.seo_no_language: Ajoutez d'abord une langue.
+publish.seo_robots: Moteurs de recherche (robots.txt)
+publish.seo_robots_allow: Autoriser les moteurs de recherche à indexer le site
+publish.seo_robots_disallow: Fermer le site à l'indexation
+publish.seo_robots_extra: Lignes supplémentaires (directives ou commentaires # , une par ligne)
+publish.seo_robots_hint: Le site sert ce robots.txt à l'adresse /robots.txt. Pour un site ouvert, l'adresse du sitemap est ajoutée automatiquement ; un site fermé est en outre marqué noindex.
+publish.seo_robots_mode: Indexation
+publish.seo_saved: Enregistré.
+publish.seo_social: Réseaux sociaux (Open Graph, Twitter/X)
+publish.seo_social_card: Carte Twitter/X
+publish.seo_social_card_large: Grande image
+publish.seo_social_card_small: Petite image
+publish.seo_social_description: "Description de l'aperçu (vide : la description du site)"
+publish.seo_social_hint: Par défaut, le titre et la description de l'aperçu d'un lien sont ceux de la langue. L'image est commune à toutes les langues ; PNG, JPEG ou WebP jusqu'à 1 Mo, 1200x630 recommandé. Enregistrez d'abord le SEO pour la téléverser.
+publish.seo_social_image: Image d'aperçu
+publish.seo_social_site: Compte Twitter/X du site (@nom)
+publish.seo_social_title: "Titre de l'aperçu (vide : le titre du site)"
+publish.seo_texts: Textes
+publish.seo_title: Titre du site
+publish.seo_title_template: Modèle du titre de page ({page} est la page, {site} le titre du site)
+publish.seo_verify_bing: Code de vérification Bing Webmaster
+publish.seo_verify_google: Code de vérification Google Search Console
+publish.seo_verify_yandex: Code de vérification Yandex Webmaster
+publish.seo_ym: Numéro du compteur Yandex Metrika
+publish.updated_at: Dernière modification
+mcp.enable_publish_domain_write_label: "Domaines : créer et associer un style et un SEO"
+mcp.enable_publish_style_write_label: "Styles et SEO : créer et modifier, analyser un site de référence"
+mcp.group_publish: Publication des sites
+mcp.publish_domain_write_warning: L'IA peut ajouter un domaine sur lequel la documentation est publiée (dans la limite de la licence) et modifier le style et le SEO d'un domaine. Un domaine ne peut pas être supprimé via le serveur MCP.
+mcp.publish_not_licensed: La licence n'inclut pas la publication ; sans elle, les commutateurs ci-dessous n'ont aucun effet.
+mcp.publish_style_write_warning: L'IA peut créer et modifier les styles et le SEO des sites publiés (couleurs, logos, textes, liens, pied de page), ce que voit chaque lecteur de ces sites. Le serveur envoie aussi des requêtes aux adresses des sites et des images indiquées par l'IA ; rien n'est supprimé.

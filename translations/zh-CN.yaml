@@ -1318,3 +1318,69 @@ publish.token_footer_link_hover_weight: 悬停时的字重
 publish.token_header_link_hover_size: 悬停时的字号（px）
 publish.token_header_link_hover_underline: 悬停时的下划线
 publish.token_header_link_hover_weight: 悬停时的字重
+mcp.enable_overlay_write_label: 叠加层：编辑描述
+mcp.enable_page_write_label: 文本页面：创建和编辑
+mcp.enable_structure_write_label: 结构：在文件夹之间移动标签和端点
+mcp.group_write: 写入（会修改文档）
+mcp.overlay_write_warning: AI 可以替换服务、标签、端点以及请求和响应字段的描述。更改会立即发布，并以 AI 的名义记入历史。
+mcp.page_write_warning: AI 可以创建文本页面并修改现有页面的文本。更改会立即发布，并以 AI 的名义记入页面历史。
+mcp.structure_write_warning: AI 可以在文件夹之间移动标签和端点，这会改变所有读者看到的服务导航。
+mcp.write_warning_title: 存在潜在风险的访问。
+publish.back_to_seo: 返回列表
+publish.lang_add: 添加语言
+publish.lang_code: 代码（en、ru、pt-BR）
+publish.lang_copy: 从默认语言复制
+publish.lang_copy_confirm: 用默认语言的内容替换此语言已填写的内容？
+publish.lang_default: 默认
+publish.lang_delete_confirm: 删除此语言？其文本、链接和页脚将丢失。
+publish.lang_incomplete: 未填写
+publish.lang_name: 语言名称
+publish.no_seo_yet: 暂无 SEO。
+publish.seo: SEO
+publish.seo_add: 添加 SEO
+publish.seo_codes: 验证与统计代码
+publish.seo_codes_hint: 只保存代码和标识符：站点会自行生成验证标签并接入统计，此处无法添加任何脚本。
+publish.seo_default: 默认值
+publish.seo_delete_confirm: 删除此 SEO？此操作无法撤销。
+publish.seo_description: 描述
+publish.seo_edit: 编辑 SEO
+publish.seo_ga: Google Analytics ID（G-XXXXXXXXXX）
+publish.seo_keywords: 关键词（以逗号分隔）
+publish.seo_languages: 语言
+publish.seo_languages_hint: 站点默认以默认语言打开；其他语言由读者选择。下方的文本、顶部栏和页脚需要为每种语言分别填写。
+publish.seo_llms: 面向语言模型的文件（llms.txt）
+publish.seo_llms_enabled: 发布 llms.txt 和 llms-full.txt
+publish.seo_llms_hint: 站点提供 /llms.txt（附带链接的文档简明指南）和 /llms-full.txt（完整版本，Markdown 格式，最大 2 MiB）。标题和描述取自该语言的文本；下方的简介紧随其后。
+publish.seo_llms_intro: 简介（显示在描述之后）
+publish.seo_name_required: 请输入 SEO 名称。
+publish.seo_no_language: 请先添加语言。
+publish.seo_robots: 搜索引擎（robots.txt）
+publish.seo_robots_allow: 允许搜索引擎索引站点
+publish.seo_robots_disallow: 禁止索引站点
+publish.seo_robots_extra: 额外行（指令或 # 注释，每行一条）
+publish.seo_robots_hint: 站点在 /robots.txt 提供此 robots.txt。对于开放的站点，会自动添加站点地图地址；关闭的站点还会被标记为 noindex。
+publish.seo_robots_mode: 索引
+publish.seo_saved: 已保存。
+publish.seo_social: 社交网络（Open Graph、Twitter/X）
+publish.seo_social_card: Twitter/X 卡片
+publish.seo_social_card_large: 大图
+publish.seo_social_card_small: 小图
+publish.seo_social_description: 预览描述（留空：使用站点描述）
+publish.seo_social_hint: 链接预览的标题和描述默认取自该语言的标题和描述。图片对所有语言通用；PNG、JPEG 或 WebP，最大 1 MB，建议尺寸 1200x630。请先保存 SEO，再上传图片。
+publish.seo_social_image: 预览图片
+publish.seo_social_site: 站点的 Twitter/X 账号（@名称）
+publish.seo_social_title: 预览标题（留空：使用站点标题）
+publish.seo_texts: 文本
+publish.seo_title: 站点标题
+publish.seo_title_template: 页面标题模板（{page} 为页面，{site} 为站点标题）
+publish.seo_verify_bing: Bing Webmaster 验证码
+publish.seo_verify_google: Google Search Console 验证码
+publish.seo_verify_yandex: Yandex Webmaster 验证码
+publish.seo_ym: Yandex Metrika 计数器编号
+publish.updated_at: 最后修改时间
+mcp.enable_publish_domain_write_label: 域名：创建并绑定样式和 SEO
+mcp.enable_publish_style_write_label: 样式和 SEO：创建和编辑，分析参考站点
+mcp.group_publish: 站点发布
+mcp.publish_domain_write_warning: AI 可以添加用于发布文档的域名（在许可证限额内），并更改域名的样式和 SEO。无法通过 MCP 服务器删除域名。
+mcp.publish_not_licensed: 许可证不包含发布功能；没有它，下方的开关不起作用。
+mcp.publish_style_write_warning: AI 可以创建和修改已发布站点的样式和 SEO（颜色、标志、文本、链接、页脚），这些内容每位读者都会看到。服务器还会向 AI 指定的站点和图片地址发送请求；不会删除任何内容。

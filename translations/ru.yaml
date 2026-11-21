@@ -157,7 +157,7 @@ button.save_request: Сохранить
 button.services: Сервисы
 button.share_request: Поделиться
 button.show_original: Показать оригинал
-button.show_overlay: Показать наложение
+button.show_overlay: Показать оверлей
 button.teams: Команды
 endpoint.change_history: История изменений
 endpoint.deprecated: Устарело
@@ -685,7 +685,7 @@ editor.switch_to_markdown: Переключиться на редактиров�
 editor.switch_to_visual: Переключиться на визуальное редактирование
 editor.text_aria: Текст в формате Markdown
 editor.toolbar: Форматирование Markdown
-paramoverlay.delete_confirm: Пустой текст удаляет наложение этого параметра и его историю. Удалить?
+paramoverlay.delete_confirm: Пустой текст удаляет оверлей этого параметра и его историю. Удалить?
 paramoverlay.delete_version_confirm: Удалить эту версию из истории?
 paramoverlay.load_failed: Не удалось загрузить
 paramoverlay.no_description: Описание отсутствует.
@@ -1007,7 +1007,7 @@ pages.version: Версия
 pages.version_current: текущая
 pages.version_view: Просмотр
 labels.add: Добавить метку
-labels.filter_chip: «Метка: {label}»
+labels.filter_chip: "Метка: {label}"
 labels.filter_clear: Показать всё снова
 labels.placeholder: Новая метка
 labels.remove: Удалить метку
@@ -1066,14 +1066,14 @@ mcp.enable_branch_tools_label: Ветки сервиса (требуются и�
 mcp.enable_version_read_label: Чтение исторических версий (требуются инструменты работы с историей)
 admin.environment_mcp_label: Доступно через сервер MCP (только для общедоступных окружений)
 admin.header_sensitive: Конфиденциально
-license.feature_mcp_tryit: «Try-It» через сервер MCP
-license.quota_mcp_tryit_requests: Запросы «Try-It» MCP
-mcp.enable_tryit_label: «Try-It: отправка запросов к реальным API»
+license.feature_mcp_tryit: "Try-It" через сервер MCP
+license.quota_mcp_tryit_requests: Запросы "Try-It" MCP
+mcp.enable_tryit_label: "Try-It: отправка запросов к реальным API"
 mcp.group_basic: Общие
 mcp.group_network: Сетевой доступ
 mcp.group_read: Инструменты чтения
 mcp.group_services: Сервисы
-mcp.group_tryit: «Try-It» (реальные запросы)
+mcp.group_tryit: "Try-It" (реальные запросы)
 mcp.group_versions: Версии и ветки
 mcp.tryit_concurrent_label: Одновременные запросы
 mcp.tryit_not_licensed: Лицензия не включает использование Try-It через сервер MCP.
@@ -1141,7 +1141,7 @@ publish.back: Вернуться к документации
 publish.back_label: Документация
 publish.back_to_styles: Вернуться к списку
 publish.back_to_versions: Вернуться к списку
-publish.contrast_warning: «Низкая контрастность ({scheme}): {fg} на {bg} составляет {ratio}:1, рекомендуется 4,5:1.»
+publish.contrast_warning: "Низкая контрастность ({scheme}): {fg} на {bg} составляет {ratio}:1, рекомендуется 4,5:1."
 publish.created_at: Создано
 publish.created_by: Создано
 publish.domain: Домен
@@ -1212,7 +1212,7 @@ publish.remove_service_confirm: Удалить этот сервис из опу
 publish.service: Сервис
 publish.service_content: Опубликовано
 publish.service_examples: Примеры
-publish.service_overlay: Наложения
+publish.service_overlay: Оверлеи
 publish.service_version: Версия сервиса
 publish.site_default_language: Язык по умолчанию
 publish.site_description: Описание по умолчанию
@@ -1266,7 +1266,7 @@ publish.version_delete_confirm: Удалить эту версию и опубл
 publish.version_edit: Версия
 publish.version_hidden: Скрыто
 publish.version_hide: Скрыть
-publish.version_locked_hint: «Параметры сервиса в опубликованной версии нельзя изменить: удалите сервис и добавьте его заново».
+publish.version_locked_hint: "Параметры сервиса в опубликованной версии нельзя изменить: удалите сервис и добавьте его заново."
 publish.version_name: Название
 publish.version_name_required: Введите название версии.
 publish.version_preview: Предварительный просмотр на сайте
@@ -1325,3 +1325,69 @@ publish.token_footer_link_hover_weight: Насыщенность шрифта п
 publish.token_header_link_hover_size: Размер шрифта при наведении курсора (px)
 publish.token_header_link_hover_underline: Подчёркивание при наведении курсора
 publish.token_header_link_hover_weight: Насыщенность шрифта при наведении курсора
+mcp.enable_overlay_write_label: "Оверлеи: редактирование описаний"
+mcp.enable_page_write_label: "Текстовые страницы: создание и редактирование"
+mcp.enable_structure_write_label: "Структура: перемещение тегов и конечных точек между папками"
+mcp.group_write: Запись (изменяет документацию)
+mcp.overlay_write_warning: ИИ может заменять описания сервисов, тегов, конечных точек, а также полей запросов и ответов. Изменения публикуются сразу и записываются в историю под именем ИИ.
+mcp.page_write_warning: ИИ может создавать текстовые страницы и изменять текст существующих. Изменения публикуются сразу и записываются в историю страницы под именем ИИ.
+mcp.structure_write_warning: ИИ может перемещать теги и конечные точки между папками, что изменяет навигацию по сервису для каждого читателя.
+mcp.write_warning_title: Потенциально небезопасный доступ.
+publish.back_to_seo: Вернуться к списку
+publish.lang_add: Добавить язык
+publish.lang_code: Код (en, ru, pt-BR)
+publish.lang_copy: Скопировать с языка по умолчанию
+publish.lang_copy_confirm: Заменить текст для этого языка текстом с языка по умолчанию?
+publish.lang_default: По умолчанию
+publish.lang_delete_confirm: Удалить этот язык? Его тексты, ссылки и нижний колонтитул будут утеряны.
+publish.lang_incomplete: Не заполнено
+publish.lang_name: Название языка
+publish.no_seo_yet: SEO ещё не настроено.
+publish.seo: SEO
+publish.seo_add: Добавить SEO
+publish.seo_codes: Проверка и счетчики
+publish.seo_codes_hint: «Сохраняются только коды и идентификаторы: сайт самостоятельно формирует теги проверки и подключает счетчики; сюда нельзя добавить никаких скриптов».
+publish.seo_default: Значения по умолчанию
+publish.seo_delete_confirm: Удалить эту SEO-оптимизацию? Это действие нельзя отменить.
+publish.seo_description: Описание
+publish.seo_edit: Редактировать SEO
+publish.seo_ga: Идентификатор Google Analytics (G-XXXXXXXXXX)
+publish.seo_keywords: Ключевые слова (разделены запятыми)
+publish.seo_languages: Языки
+publish.seo_languages_hint: Сайт открывается на языке по умолчанию; остальные языки выбирает читатель. Тексты, верхняя панель и нижний колонтитул заполняются для каждого языка.
+publish.seo_llms: Файлы для языковых моделей (llms.txt)
+publish.seo_llms_enabled: Опубликовать llms.txt и llms-full.txt
+publish.seo_llms_hint: Сайт предоставляет доступ к файлам /llms.txt (краткое руководство по документации со ссылками) и /llms-full.txt (полная версия в формате Markdown, размером до 2 MiB). Заголовок и описание берутся из текстов на данном языке; введение, приведенное ниже, следует за ними.
+publish.seo_llms_intro: Введение (отображается после описания)
+publish.seo_name_required: Введите SEO-название.
+publish.seo_no_language: Сначала добавьте язык.
+publish.seo_robots: Поисковые системы (robots.txt)
+publish.seo_robots_allow: Разрешить поисковым системам индексировать сайт
+publish.seo_robots_disallow: Запретить индексирование сайта
+publish.seo_robots_extra: Дополнительные строки (директивы или комментарии с символом #, по одной в строке)
+publish.seo_robots_hint: Сайт предоставляет этот файл robots.txt по адресу /robots.txt. Для открытого сайта адрес карты сайта добавляется автоматически; закрытый сайт также помечается как noindex.
+publish.seo_robots_mode: Индексирование
+publish.seo_saved: Сохранено.
+publish.seo_social: Социальные сети (Open Graph, Twitter/X)
+publish.seo_social_card: Карточка Twitter/X
+publish.seo_social_card_large: Большое изображение
+publish.seo_social_card_small: Малое изображение
+publish.seo_social_description: "Описание для предварительного просмотра (если поле пустое — используется описание сайта)"
+publish.seo_social_hint: Заголовок и описание предварительного просмотра ссылки по умолчанию принимают значения из заголовка и описания языковой версии. Изображение используется для всех языковых версий; допускаются форматы PNG, JPEG или WebP размером до 1 МБ, рекомендуется размер 1200x630. Для загрузки сначала сохраните SEO-данные.
+publish.seo_social_image: Изображение для предварительного просмотра
+publish.seo_social_site: Аккаунт сайта в Twitter/X (@имя)
+publish.seo_social_title: "Заголовок предварительного просмотра (если поле пустое — используется заголовок сайта)"
+publish.seo_texts: Тексты
+publish.seo_title: Заголовок сайта
+publish.seo_title_template: Шаблон заголовка страницы ({page} — номер страницы, {site} — заголовок сайта)
+publish.seo_verify_bing: Код подтверждения в Bing Webmaster
+publish.seo_verify_google: Код подтверждения в Google Search Console
+publish.seo_verify_yandex: Код подтверждения в Yandex Webmaster
+publish.seo_ym: Номер счетчика Yandex Metrica
+publish.updated_at: Время последнего изменения
+mcp.enable_publish_domain_write_label: "Домены: создание и привязка стиля и SEO"
+mcp.enable_publish_style_write_label: "Стили и SEO: создание и редактирование, анализ эталонного сайта"
+mcp.group_publish: Публикация сайтов
+mcp.publish_domain_write_warning: ИИ может добавлять домены, на которых публикуется документация (в пределах лимита лицензии), а также изменять стиль и SEO домена. Домен нельзя удалить через сервер MCP.
+mcp.publish_not_licensed: Лицензия не включает публикацию; без неё приведенные ниже параметры не действуют.
+mcp.publish_style_write_warning: ИИ может создавать и изменять стили и SEO опубликованных сайтов (цвета, логотипы, тексты, ссылки, нижний колонтитул) — то, что видит каждый читатель этих сайтов. Сервер также отправляет запросы на адреса сайтов и изображений, указанных ИИ; ничего не удаляется.

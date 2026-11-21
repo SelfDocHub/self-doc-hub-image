@@ -1318,3 +1318,69 @@ publish.token_footer_link_hover_weight: Peso da fonte ao passar o mouse
 publish.token_header_link_hover_size: Tamanho da fonte ao passar o mouse (px)
 publish.token_header_link_hover_underline: Sublinhado ao passar o mouse
 publish.token_header_link_hover_weight: Peso da fonte ao passar o mouse
+mcp.enable_overlay_write_label: "Overlays: editar descrições"
+mcp.enable_page_write_label: "Páginas de texto: criar e editar"
+mcp.enable_structure_write_label: "Estrutura: mover tags e endpoints entre pastas"
+mcp.group_write: Escrita (altera a documentação)
+mcp.overlay_write_warning: A IA pode substituir as descrições de serviços, tags, endpoints e dos campos das requisições e respostas. As alterações são publicadas imediatamente e registradas no histórico com o nome da IA.
+mcp.page_write_warning: A IA pode criar páginas de texto e alterar o texto das existentes. As alterações são publicadas imediatamente e registradas no histórico da página com o nome da IA.
+mcp.structure_write_warning: A IA pode mover tags e endpoints entre pastas, o que altera a navegação do serviço para todos os leitores.
+mcp.write_warning_title: Acesso potencialmente inseguro.
+publish.back_to_seo: Voltar à lista
+publish.lang_add: Adicionar idioma
+publish.lang_code: Código (en, ru, pt-BR)
+publish.lang_copy: Copiar do idioma padrão
+publish.lang_copy_confirm: Substituir o que está escrito para este idioma pelo do idioma padrão?
+publish.lang_default: Padrão
+publish.lang_delete_confirm: Excluir este idioma? Seus textos, links e rodapé serão perdidos.
+publish.lang_incomplete: Não preenchido
+publish.lang_name: Nome do idioma
+publish.no_seo_yet: Ainda não há SEO.
+publish.seo: SEO
+publish.seo_add: Adicionar SEO
+publish.seo_codes: Verificação e contadores
+publish.seo_codes_hint: "Somente os códigos e os identificadores são armazenados: o site gera por conta própria as tags de verificação e conecta os contadores; nenhum script pode ser adicionado aqui."
+publish.seo_default: Valores padrão
+publish.seo_delete_confirm: Excluir este SEO? Esta ação não pode ser desfeita.
+publish.seo_description: Descrição
+publish.seo_edit: Editar SEO
+publish.seo_ga: ID do Google Analytics (G-XXXXXXXXXX)
+publish.seo_keywords: Palavras-chave (separadas por vírgula)
+publish.seo_languages: Idiomas
+publish.seo_languages_hint: O site abre no idioma padrão; os demais idiomas são escolhidos pelo leitor. Os textos, a barra superior e o rodapé abaixo são preenchidos para cada idioma.
+publish.seo_llms: Arquivos para modelos de linguagem (llms.txt)
+publish.seo_llms_enabled: Publicar llms.txt e llms-full.txt
+publish.seo_llms_hint: O site serve /llms.txt (um guia curto da documentação com links) e /llms-full.txt (a versão completa em Markdown, até 2 MiB). O título e a descrição vêm dos textos do idioma; a introdução abaixo vem em seguida.
+publish.seo_llms_intro: Introdução (exibida após a descrição)
+publish.seo_name_required: Informe o nome do SEO.
+publish.seo_no_language: Adicione primeiro um idioma.
+publish.seo_robots: Mecanismos de busca (robots.txt)
+publish.seo_robots_allow: Permitir que os mecanismos de busca indexem o site
+publish.seo_robots_disallow: Fechar o site para indexação
+publish.seo_robots_extra: Linhas adicionais (diretivas ou comentários com #, uma por linha)
+publish.seo_robots_hint: O site serve este robots.txt em /robots.txt. Em um site aberto, o endereço do sitemap é adicionado automaticamente; um site fechado também é marcado com noindex.
+publish.seo_robots_mode: Indexação
+publish.seo_saved: Salvo.
+publish.seo_social: Redes sociais (Open Graph, Twitter/X)
+publish.seo_social_card: Cartão do Twitter/X
+publish.seo_social_card_large: Imagem grande
+publish.seo_social_card_small: Imagem pequena
+publish.seo_social_description: "Descrição da pré-visualização (vazio: a descrição do site)"
+publish.seo_social_hint: O título e a descrição da pré-visualização de um link usam, por padrão, o título e a descrição do idioma. A imagem é comum a todos os idiomas; PNG, JPEG ou WebP de até 1 MB, recomenda-se 1200x630. Salve primeiro o SEO para enviá-la.
+publish.seo_social_image: Imagem de pré-visualização
+publish.seo_social_site: Conta do Twitter/X do site (@nome)
+publish.seo_social_title: "Título da pré-visualização (vazio: o título do site)"
+publish.seo_texts: Textos
+publish.seo_title: Título do site
+publish.seo_title_template: Modelo do título da página ({page} é a página, {site} o título do site)
+publish.seo_verify_bing: Código de verificação do Bing Webmaster
+publish.seo_verify_google: Código de verificação do Google Search Console
+publish.seo_verify_yandex: Código de verificação do Yandex Webmaster
+publish.seo_ym: Número do contador do Yandex Metrika
+publish.updated_at: Última alteração
+mcp.enable_publish_domain_write_label: "Domínios: criar e vincular um estilo e um SEO"
+mcp.enable_publish_style_write_label: "Estilos e SEO: criar e editar, analisar um site de referência"
+mcp.group_publish: Publicação dos sites
+mcp.publish_domain_write_warning: A IA pode adicionar um domínio no qual a documentação é publicada (dentro do limite da licença) e alterar o estilo e o SEO de um domínio. Um domínio não pode ser excluído pelo servidor MCP.
+mcp.publish_not_licensed: A licença não inclui a publicação; sem ela, as opções abaixo não têm efeito.
+mcp.publish_style_write_warning: A IA pode criar e alterar os estilos e o SEO dos sites publicados (cores, logotipos, textos, links, rodapé), o que todo leitor desses sites vê. O servidor também envia requisições aos endereços dos sites e das imagens indicados pela IA; nada é excluído.

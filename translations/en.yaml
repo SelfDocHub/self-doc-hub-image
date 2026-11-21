@@ -1318,3 +1318,69 @@ publish.token_footer_link_hover_weight: Font weight on hover
 publish.token_header_link_hover_size: Font size on hover (px)
 publish.token_header_link_hover_underline: Underline on hover
 publish.token_header_link_hover_weight: Font weight on hover
+mcp.enable_overlay_write_label: "Overlays: edit descriptions"
+mcp.enable_page_write_label: "Text pages: create and edit"
+mcp.enable_structure_write_label: "Structure: move tags and endpoints between folders"
+mcp.group_write: Writing (changes the documentation)
+mcp.overlay_write_warning: The AI can replace the descriptions of services, tags, endpoints and of the fields of requests and responses. Changes are published at once and are written to the history under the name of the AI.
+mcp.page_write_warning: The AI can create text pages and change the text of existing ones. Changes are published at once and are written to the history of the page under the name of the AI.
+mcp.structure_write_warning: The AI can move tags and endpoints between folders, which changes the navigation of the service for every reader.
+mcp.write_warning_title: Potentially unsafe access.
+publish.back_to_seo: Back to the list
+publish.lang_add: Add language
+publish.lang_code: Code (en, ru, pt-BR)
+publish.lang_copy: Copy from the default language
+publish.lang_copy_confirm: Replace what is written for this language with the default language's?
+publish.lang_default: Default
+publish.lang_delete_confirm: Delete this language? Its texts, links and footer are lost.
+publish.lang_incomplete: Not filled in
+publish.lang_name: Name of the language
+publish.no_seo_yet: No SEO yet.
+publish.seo: SEO
+publish.seo_add: Add SEO
+publish.seo_codes: Verification and counters
+publish.seo_codes_hint: "Only the codes and the identifiers are stored: the site builds the verification tags and connects the counters itself, no script can be added here."
+publish.seo_default: Defaults
+publish.seo_delete_confirm: Delete this SEO? This cannot be undone.
+publish.seo_description: Description
+publish.seo_edit: Edit SEO
+publish.seo_ga: Google Analytics ID (G-XXXXXXXXXX)
+publish.seo_keywords: Keywords (comma separated)
+publish.seo_languages: Languages
+publish.seo_languages_hint: The site opens in the default language; the other languages are chosen by the reader. The texts, the top bar and the footer below are filled in for each language.
+publish.seo_llms: Files for language models (llms.txt)
+publish.seo_llms_enabled: Publish llms.txt and llms-full.txt
+publish.seo_llms_hint: The site serves /llms.txt (a short guide to the documentation with links) and /llms-full.txt (the whole version as Markdown, up to 2 MiB). The title and the description come from the texts of the language; the intro below follows them.
+publish.seo_llms_intro: Intro (shown after the description)
+publish.seo_name_required: Enter the SEO name.
+publish.seo_no_language: Add a language first.
+publish.seo_robots: Search engines (robots.txt)
+publish.seo_robots_allow: Allow search engines to index the site
+publish.seo_robots_disallow: Close the site to indexing
+publish.seo_robots_extra: Extra lines (directives or # comments, one per line)
+publish.seo_robots_hint: The site serves this robots.txt at /robots.txt. For an open site the address of the sitemap is added automatically; a closed site is also marked noindex.
+publish.seo_robots_mode: Indexing
+publish.seo_saved: Saved.
+publish.seo_social: Social networks (Open Graph, Twitter/X)
+publish.seo_social_card: Twitter/X card
+publish.seo_social_card_large: Large picture
+publish.seo_social_card_small: Small picture
+publish.seo_social_description: "Preview description (empty: the description of the site)"
+publish.seo_social_hint: The title and the description of a link preview default to the title and the description of the language. The picture is shared by all languages; PNG, JPEG or WebP up to 1 MB, 1200x630 is recommended. Save the SEO first to upload it.
+publish.seo_social_image: Preview picture
+publish.seo_social_site: Twitter/X account of the site (@name)
+publish.seo_social_title: "Preview title (empty: the title of the site)"
+publish.seo_texts: Texts
+publish.seo_title: Title of the site
+publish.seo_title_template: Page title template ({page} is the page, {site} the title of the site)
+publish.seo_verify_bing: Bing Webmaster verification code
+publish.seo_verify_google: Google Search Console verification code
+publish.seo_verify_yandex: Yandex Webmaster verification code
+publish.seo_ym: Yandex Metrika counter number
+publish.updated_at: Last changed
+mcp.enable_publish_domain_write_label: "Domains: create and bind a style and an SEO"
+mcp.enable_publish_style_write_label: "Styles and SEO: create and edit, analyse a reference site"
+mcp.group_publish: Publishing of the sites
+mcp.publish_domain_write_warning: The AI can add a domain the documentation is published on (within the limit of the license) and change the style and the SEO of a domain. A domain cannot be deleted through the MCP server.
+mcp.publish_not_licensed: The license does not include publishing; the switches below have no effect without it.
+mcp.publish_style_write_warning: The AI can create and change the styles and the SEO of the published sites (colors, logos, texts, links, footer), which is what every reader of those sites sees. The server also sends requests to the addresses of the sites and pictures the AI names; nothing is deleted.

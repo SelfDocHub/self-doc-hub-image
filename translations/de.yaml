@@ -1318,3 +1318,69 @@ publish.token_footer_link_hover_weight: Schriftstärke beim Darüberfahren
 publish.token_header_link_hover_size: Schriftgröße beim Darüberfahren (px)
 publish.token_header_link_hover_underline: Unterstreichung beim Darüberfahren
 publish.token_header_link_hover_weight: Schriftstärke beim Darüberfahren
+mcp.enable_overlay_write_label: "Overlays: Beschreibungen bearbeiten"
+mcp.enable_page_write_label: "Textseiten: erstellen und bearbeiten"
+mcp.enable_structure_write_label: "Struktur: Tags und Endpunkte zwischen Ordnern verschieben"
+mcp.group_write: Schreiben (ändert die Dokumentation)
+mcp.overlay_write_warning: Die KI kann die Beschreibungen von Services, Tags, Endpunkten sowie der Felder von Anfragen und Antworten ersetzen. Änderungen werden sofort veröffentlicht und unter dem Namen der KI im Verlauf festgehalten.
+mcp.page_write_warning: Die KI kann Textseiten erstellen und den Text vorhandener Seiten ändern. Änderungen werden sofort veröffentlicht und unter dem Namen der KI im Verlauf der Seite festgehalten.
+mcp.structure_write_warning: Die KI kann Tags und Endpunkte zwischen Ordnern verschieben, wodurch sich die Navigation des Services für jeden Leser ändert.
+mcp.write_warning_title: Potenziell unsicherer Zugriff.
+publish.back_to_seo: Zurück zur Liste
+publish.lang_add: Sprache hinzufügen
+publish.lang_code: Code (en, ru, pt-BR)
+publish.lang_copy: Aus der Standardsprache kopieren
+publish.lang_copy_confirm: Den Inhalt dieser Sprache durch den der Standardsprache ersetzen?
+publish.lang_default: Standard
+publish.lang_delete_confirm: Diese Sprache löschen? Ihre Texte, Links und die Fußzeile gehen verloren.
+publish.lang_incomplete: Nicht ausgefüllt
+publish.lang_name: Name der Sprache
+publish.no_seo_yet: Noch kein SEO.
+publish.seo: SEO
+publish.seo_add: SEO hinzufügen
+publish.seo_codes: Verifizierung und Zähler
+publish.seo_codes_hint: "Es werden nur die Codes und Kennungen gespeichert: Die Website erzeugt die Verifizierungs-Tags und bindet die Zähler selbst ein, hier kann kein Skript hinzugefügt werden."
+publish.seo_default: Standardwerte
+publish.seo_delete_confirm: Dieses SEO löschen? Das lässt sich nicht rückgängig machen.
+publish.seo_description: Beschreibung
+publish.seo_edit: SEO bearbeiten
+publish.seo_ga: Google-Analytics-ID (G-XXXXXXXXXX)
+publish.seo_keywords: Schlüsselwörter (durch Komma getrennt)
+publish.seo_languages: Sprachen
+publish.seo_languages_hint: Die Website öffnet sich in der Standardsprache; die anderen Sprachen wählt der Leser. Die Texte, die obere Leiste und die Fußzeile unten werden für jede Sprache ausgefüllt.
+publish.seo_llms: Dateien für Sprachmodelle (llms.txt)
+publish.seo_llms_enabled: llms.txt und llms-full.txt veröffentlichen
+publish.seo_llms_hint: Die Website liefert /llms.txt (eine kurze Anleitung zur Dokumentation mit Links) und /llms-full.txt (die ganze Version als Markdown, bis zu 2 MiB). Titel und Beschreibung stammen aus den Texten der Sprache; die Einleitung unten folgt darauf.
+publish.seo_llms_intro: Einleitung (wird nach der Beschreibung angezeigt)
+publish.seo_name_required: Geben Sie den SEO-Namen ein.
+publish.seo_no_language: Fügen Sie zuerst eine Sprache hinzu.
+publish.seo_robots: Suchmaschinen (robots.txt)
+publish.seo_robots_allow: Suchmaschinen die Indexierung der Website erlauben
+publish.seo_robots_disallow: Website für die Indexierung sperren
+publish.seo_robots_extra: Zusätzliche Zeilen (Direktiven oder #-Kommentare, eine pro Zeile)
+publish.seo_robots_hint: Die Website liefert diese robots.txt unter /robots.txt aus. Bei einer offenen Website wird die Adresse der Sitemap automatisch ergänzt; eine gesperrte Website wird außerdem mit noindex markiert.
+publish.seo_robots_mode: Indexierung
+publish.seo_saved: Gespeichert.
+publish.seo_social: Soziale Netzwerke (Open Graph, Twitter/X)
+publish.seo_social_card: Twitter/X-Karte
+publish.seo_social_card_large: Großes Bild
+publish.seo_social_card_small: Kleines Bild
+publish.seo_social_description: "Beschreibung der Vorschau (leer: die Beschreibung der Website)"
+publish.seo_social_hint: Titel und Beschreibung einer Link-Vorschau entsprechen standardmäßig Titel und Beschreibung der Sprache. Das Bild gilt für alle Sprachen; PNG, JPEG oder WebP bis 1 MB, empfohlen sind 1200x630. Speichern Sie zuerst das SEO, um es hochzuladen.
+publish.seo_social_image: Vorschaubild
+publish.seo_social_site: Twitter/X-Konto der Website (@name)
+publish.seo_social_title: "Titel der Vorschau (leer: der Titel der Website)"
+publish.seo_texts: Texte
+publish.seo_title: Titel der Website
+publish.seo_title_template: Vorlage für den Seitentitel ({page} ist die Seite, {site} der Titel der Website)
+publish.seo_verify_bing: Bestätigungscode für Bing Webmaster
+publish.seo_verify_google: Bestätigungscode für die Google Search Console
+publish.seo_verify_yandex: Bestätigungscode für Yandex Webmaster
+publish.seo_ym: Nummer des Yandex-Metrika-Zählers
+publish.updated_at: Zuletzt geändert
+mcp.enable_publish_domain_write_label: "Domains: anlegen und Stil sowie SEO zuweisen"
+mcp.enable_publish_style_write_label: "Stile und SEO: erstellen und bearbeiten, Referenz-Website analysieren"
+mcp.group_publish: Veröffentlichung der Websites
+mcp.publish_domain_write_warning: Die KI kann Domains hinzufügen, auf denen die Dokumentation veröffentlicht wird (im Rahmen des Lizenzlimits), und Stil sowie SEO einer Domain ändern. Eine Domain kann über den MCP-Server nicht gelöscht werden.
+mcp.publish_not_licensed: Die Lizenz enthält keine Veröffentlichung; die Schalter unten haben ohne sie keine Wirkung.
+mcp.publish_style_write_warning: Die KI kann Stile und SEO der veröffentlichten Websites erstellen und ändern (Farben, Logos, Texte, Links, Fußzeile), was jeder Leser dieser Websites sieht. Der Server sendet außerdem Anfragen an die Adressen der Websites und Bilder, die die KI nennt; es wird nichts gelöscht.
