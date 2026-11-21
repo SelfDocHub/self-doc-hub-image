@@ -4,7 +4,7 @@
         "description": "API for publishing and browsing merged OpenAPI/OpenRPC documentation.",
         "title": "docs-hub API",
         "contact": {},
-        "version": "1.2.0"
+        "version": "1.4.0"
     },
     "basePath": "/",
     "paths": {
@@ -3873,7 +3873,7 @@
                         "BearerAuth": []
                     }
                 ],
-                "description": "Adds a domain with an optional style. The value is normalized (lower case, scheme, path and default\nport removed). Admin only; limited by the license (max_publish_domains).",
+                "description": "Adds a domain with an optional style and SEO. The value is normalized (lower case, scheme, path and default\nport removed). Admin only; limited by the license (max_publish_domains).",
                 "consumes": [
                     "application/json"
                 ],
@@ -3936,7 +3936,7 @@
                         "BearerAuth": []
                     }
                 ],
-                "description": "Replaces the domain name and its style. Admin only.",
+                "description": "Replaces the domain name, its style and its SEO. Admin only.",
                 "consumes": [
                     "application/json"
                 ],
@@ -4401,6 +4401,370 @@
                     },
                     "403": {
                         "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/publish/seo": {
+            "get": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "description": "Returns the SEO records of the published sites (languages, texts, top bar links and footer per language),\nsorted by name (admin only).",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "List SEO records",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/publish.SEO"
+                            }
+                        }
+                    },
+                    "402": {
+                        "description": "Payment Required",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "description": "Creates an SEO with 1-10 languages (code and name), a default language and, per language, the texts, the\ntop bar links and the footer.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "Create an SEO record",
+                "parameters": [
+                    {
+                        "description": "SEO",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/publish.SEOInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/publish.SEO"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    },
+                    "409": {
+                        "description": "Conflict",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/publish/seo/{id}": {
+            "get": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "Get an SEO record",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "SEO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publish.SEO"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "Change an SEO record",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "SEO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "SEO",
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/publish.SEOInput"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publish.SEO"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    },
+                    "409": {
+                        "description": "Conflict",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "description": "Refused with 409 while a domain uses the SEO; the message lists those domains.",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "Delete an SEO record",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "SEO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    },
+                    "409": {
+                        "description": "Conflict",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/publish/seo/{id}/image": {
+            "get": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "description": "Served with its verified type, nosniff and a policy that forbids scripts (admin preview).",
+                "produces": [
+                    "application/octet-stream"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "Get the preview picture of an SEO",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "SEO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "description": "Stores the picture that previews a link to the site in social networks (Open Graph, Twitter/X). PNG, JPEG\nand WebP, at most 1 MB; the type is verified from the content. 1200x630 is recommended. It replaces the\nprevious one.",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "Upload the preview picture of an SEO",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "SEO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "type": "file",
+                        "description": "The picture",
+                        "name": "file",
+                        "in": "formData",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publish.SEO"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/httpapi.Error"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "BearerAuth": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "publish"
+                ],
+                "summary": "Delete the preview picture of an SEO",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "SEO ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/publish.SEO"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
                         "schema": {
                             "$ref": "#/definitions/httpapi.Error"
                         }
@@ -11561,6 +11925,12 @@
                 "enable_page_write": {
                     "type": "boolean"
                 },
+                "enable_publish_domain_write": {
+                    "type": "boolean"
+                },
+                "enable_publish_style_write": {
+                    "type": "boolean"
+                },
                 "enable_schema_tools": {
                     "type": "boolean"
                 },
@@ -11654,6 +12024,12 @@
                     "type": "boolean"
                 },
                 "enable_page_write": {
+                    "type": "boolean"
+                },
+                "enable_publish_domain_write": {
+                    "type": "boolean"
+                },
+                "enable_publish_style_write": {
                     "type": "boolean"
                 },
                 "enable_schema_tools": {
@@ -11759,6 +12135,12 @@
                     "type": "boolean"
                 },
                 "enable_page_write": {
+                    "type": "boolean"
+                },
+                "enable_publish_domain_write": {
+                    "type": "boolean"
+                },
+                "enable_publish_style_write": {
                     "type": "boolean"
                 },
                 "enable_schema_tools": {
@@ -12515,6 +12897,17 @@
                 }
             }
         },
+        "publish.AnalyticsSettings": {
+            "type": "object",
+            "properties": {
+                "google_analytics": {
+                    "type": "string"
+                },
+                "yandex_metrika": {
+                    "type": "string"
+                }
+            }
+        },
         "publish.Brand": {
             "type": "object",
             "properties": {
@@ -12603,6 +12996,13 @@
                 "id": {
                     "type": "string"
                 },
+                "seo_id": {
+                    "description": "SEOID is the SEO (languages and texts) of the site; empty means the defaults. SEOName is its name.",
+                    "type": "string"
+                },
+                "seo_name": {
+                    "type": "string"
+                },
                 "style_id": {
                     "type": "string"
                 },
@@ -12619,6 +13019,10 @@
             "type": "object",
             "properties": {
                 "domain": {
+                    "type": "string"
+                },
+                "seo_id": {
+                    "description": "SEOID is the SEO (languages and texts) of the site; empty means the defaults.",
                     "type": "string"
                 },
                 "style_id": {
@@ -12680,12 +13084,6 @@
             "properties": {
                 "height": {
                     "type": "integer"
-                },
-                "links": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/publish.HeaderLink"
-                    }
                 }
             }
         },
@@ -12705,6 +13103,33 @@
             "properties": {
                 "hidden": {
                     "type": "boolean"
+                }
+            }
+        },
+        "publish.LLMsSettings": {
+            "type": "object",
+            "properties": {
+                "disabled": {
+                    "description": "Disabled switches the files off; they are on by default.",
+                    "type": "boolean"
+                },
+                "intro": {
+                    "description": "Intro is a short text per language that follows the description at the top of both files.",
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "publish.Language": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
                 }
             }
         },
@@ -12827,6 +13252,158 @@
                 }
             }
         },
+        "publish.RobotsSettings": {
+            "type": "object",
+            "properties": {
+                "extra": {
+                    "description": "Extra are lines of directives and comments added after the main group, one per line.",
+                    "type": "string"
+                },
+                "mode": {
+                    "description": "Mode is \"allow\" (the site may be indexed, the default) or \"disallow\" (the whole site is closed to robots).",
+                    "type": "string"
+                }
+            }
+        },
+        "publish.SEO": {
+            "type": "object",
+            "properties": {
+                "created_at": {
+                    "type": "string"
+                },
+                "created_by": {
+                    "type": "string"
+                },
+                "default_language": {
+                    "type": "string"
+                },
+                "footer": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/publish.Footer"
+                    }
+                },
+                "header_links": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/publish.HeaderLink"
+                        }
+                    }
+                },
+                "id": {
+                    "type": "string"
+                },
+                "languages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.Language"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "settings": {
+                    "$ref": "#/definitions/publish.SEOSettings"
+                },
+                "texts": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/publish.SEOTexts"
+                    }
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "updated_by": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.SEOInput": {
+            "type": "object",
+            "properties": {
+                "default_language": {
+                    "type": "string"
+                },
+                "footer": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/publish.Footer"
+                    }
+                },
+                "header_links": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/publish.HeaderLink"
+                        }
+                    }
+                },
+                "languages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.Language"
+                    }
+                },
+                "name": {
+                    "type": "string"
+                },
+                "settings": {
+                    "$ref": "#/definitions/publish.SEOSettings"
+                },
+                "texts": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/publish.SEOTexts"
+                    }
+                }
+            }
+        },
+        "publish.SEOSettings": {
+            "type": "object",
+            "properties": {
+                "analytics": {
+                    "$ref": "#/definitions/publish.AnalyticsSettings"
+                },
+                "llms": {
+                    "$ref": "#/definitions/publish.LLMsSettings"
+                },
+                "robots": {
+                    "$ref": "#/definitions/publish.RobotsSettings"
+                },
+                "social": {
+                    "$ref": "#/definitions/publish.SocialSettings"
+                },
+                "verification": {
+                    "$ref": "#/definitions/publish.VerificationSettings"
+                }
+            }
+        },
+        "publish.SEOTexts": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "keywords": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "title": {
+                    "description": "Title is the name of the site in this language.",
+                    "type": "string"
+                },
+                "title_template": {
+                    "description": "TitleTemplate builds the title of a page; {page} is the page's own title and {site} the Title.",
+                    "type": "string"
+                }
+            }
+        },
         "publish.ServiceSelection": {
             "type": "object",
             "properties": {
@@ -12902,22 +13479,40 @@
                 }
             }
         },
-        "publish.Site": {
+        "publish.SocialSettings": {
             "type": "object",
             "properties": {
-                "default_language": {
+                "card_type": {
+                    "description": "CardType is the Twitter/X card: \"summary\" or \"summary_large_image\" (the default).",
                     "type": "string"
                 },
+                "image": {
+                    "description": "Image describes the stored preview picture; it is set by the upload, never by the editor of the SEO.",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/publish.BrandImage"
+                        }
+                    ]
+                },
+                "texts": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "#/definitions/publish.SocialTexts"
+                    }
+                },
+                "twitter_site": {
+                    "description": "TwitterSite is the account of the site, \"@name\"; optional.",
+                    "type": "string"
+                }
+            }
+        },
+        "publish.SocialTexts": {
+            "type": "object",
+            "properties": {
                 "description": {
                     "type": "string"
                 },
-                "languages": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "name": {
+                "title": {
                     "type": "string"
                 }
             }
@@ -12933,9 +13528,6 @@
                 },
                 "created_by": {
                     "type": "string"
-                },
-                "footer": {
-                    "$ref": "#/definitions/publish.Footer"
                 },
                 "header": {
                     "$ref": "#/definitions/publish.Header"
@@ -12955,9 +13547,6 @@
                 "preset_key": {
                     "type": "string"
                 },
-                "site": {
-                    "$ref": "#/definitions/publish.Site"
-                },
                 "updated_at": {
                     "type": "string"
                 }
@@ -12966,16 +13555,8 @@
         "publish.StyleInput": {
             "type": "object",
             "properties": {
-                "footer": {
-                    "description": "Footer is the footer of the site (task 342).",
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/publish.Footer"
-                        }
-                    ]
-                },
                 "header": {
-                    "description": "Header is the top bar of the site: its height and the row of links.",
+                    "description": "Header is the top bar of the site: its height.",
                     "allOf": [
                         {
                             "$ref": "#/definitions/publish.Header"
@@ -13001,9 +13582,6 @@
                 },
                 "preset_key": {
                     "type": "string"
-                },
-                "site": {
-                    "$ref": "#/definitions/publish.Site"
                 }
             }
         },
@@ -13072,6 +13650,20 @@
                     }
                 },
                 "radius": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.VerificationSettings": {
+            "type": "object",
+            "properties": {
+                "bing": {
+                    "type": "string"
+                },
+                "google": {
+                    "type": "string"
+                },
+                "yandex": {
                     "type": "string"
                 }
             }

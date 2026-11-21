@@ -92,9 +92,150 @@
                 }
             }
         },
+        "/public/v1/llms-full.txt": {
+            "get": {
+                "description": "Returns the whole version as Markdown for language models: the services, their text pages and their\nendpoints with parameters, bodies, responses and errors, limited to 2 MiB. The site serves it at\n/llms-full.txt. The version is the default one unless the version parameter names another. 404 when the SEO\nswitches the files off.",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "llms-full.txt of the site",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID (default: the default version)",
+                        "name": "version",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Language code (default: the default language)",
+                        "name": "lang",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "llms-full.txt",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/llms.txt": {
+            "get": {
+                "description": "Returns the short description of the site for language models (llmstxt.org): the title, the description\nand the intro from the SEO, then the pages of the version with links and one-line summaries. The site serves\nit at /llms.txt. The version is the default one unless the version parameter names another. 404 when the\nSEO switches the files off.",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "llms.txt of the site",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Preview token for a hidden version",
+                        "name": "X-Preview-Token",
+                        "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version ID (default: the default version)",
+                        "name": "version",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Language code (default: the default language)",
+                        "name": "lang",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "llms.txt",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/robots": {
+            "get": {
+                "description": "Returns the robots.txt text of the domain: the group of all robots that allows or closes the site (the SEO\nof the domain says which), its extra lines and, for an open site, the address of the sitemap. The site\nserves it at /robots.txt. A domain without an SEO is open.",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "The robots.txt of the site",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "robots.txt",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
         "/public/v1/site": {
             "get": {
-                "description": "Returns the texts, languages, final design tokens (light and dark scheme), branding, top bar, footer and the\nlist of published versions of the domain named in X-Public-Domain. The first version is the default one.",
+                "description": "Returns the texts, languages, final design tokens (light and dark scheme), branding, top bar, footer and the\nlist of published versions of the domain named in X-Public-Domain. The texts, the top bar links and the\nfooter are in the language of the lang parameter; without it, or with a language the site does not have,\nthey are in the default language, and what a language leaves empty is taken from the default one. The\nfirst version is the default one.",
                 "produces": [
                     "application/json"
                 ],
@@ -115,6 +256,12 @@
                         "description": "Preview token that adds a hidden version to the list",
                         "name": "X-Preview-Token",
                         "in": "header"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Language code of the texts (default: the default language)",
+                        "name": "lang",
+                        "in": "query"
                     }
                 ],
                 "responses": {
@@ -138,6 +285,44 @@
                     },
                     "429": {
                         "description": "Too Many Requests",
+                        "schema": {
+                            "$ref": "#/definitions/publicapi.ErrorResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/public/v1/social-image": {
+            "get": {
+                "description": "Returns the picture that previews a link to the site in social networks, with its verified type and a long\ncache (the address in the site response carries a version).",
+                "produces": [
+                    "application/octet-stream"
+                ],
+                "tags": [
+                    "public"
+                ],
+                "summary": "The preview picture of the site",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "The domain the site runs on",
+                        "name": "X-Public-Domain",
+                        "in": "header",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "Version of the picture, from the site response",
+                        "name": "v",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Not Found",
                         "schema": {
                             "$ref": "#/definitions/publicapi.ErrorResponse"
                         }
@@ -510,6 +695,20 @@
                 }
             }
         },
+        "publicapi.SiteHeader": {
+            "type": "object",
+            "properties": {
+                "height": {
+                    "type": "integer"
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.HeaderLink"
+                    }
+                }
+            }
+        },
         "publicapi.SiteImage": {
             "type": "object",
             "properties": {
@@ -527,6 +726,9 @@
         "publicapi.SiteResponse": {
             "type": "object",
             "properties": {
+                "analytics": {
+                    "$ref": "#/definitions/publish.AnalyticsSettings"
+                },
                 "brand": {
                     "$ref": "#/definitions/publicapi.SiteBrand"
                 },
@@ -534,6 +736,7 @@
                     "type": "string"
                 },
                 "default_version": {
+                    "description": "DefaultVersion is the version the site opens.",
                     "type": "string"
                 },
                 "description": {
@@ -546,25 +749,79 @@
                     "$ref": "#/definitions/publish.Footer"
                 },
                 "header": {
-                    "$ref": "#/definitions/publish.Header"
+                    "$ref": "#/definitions/publicapi.SiteHeader"
                 },
-                "languages": {
+                "keywords": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     }
                 },
+                "language": {
+                    "description": "Language is the language of the texts, the top bar links and the footer of this response; Languages lists every\nlanguage of the site.",
+                    "type": "string"
+                },
+                "languages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publish.Language"
+                    }
+                },
                 "name": {
+                    "description": "Name is the title of the site, TitleTemplate builds the title of a page ({page}, {site}).",
+                    "type": "string"
+                },
+                "noindex": {
+                    "description": "Noindex asks the site to close its pages to search engines (a meta robots tag): the SEO closes the whole site, or\nthe request holds a preview token of a hidden version.",
+                    "type": "boolean"
+                },
+                "social": {
+                    "description": "Social are the previews of a link to the site, Verification the codes that prove its ownership to search engines and\nAnalytics the identifiers of its counters; the site builds the tags and connects the counters itself.",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/publicapi.SiteSocial"
+                        }
+                    ]
+                },
+                "title_template": {
                     "type": "string"
                 },
                 "tokens": {
                     "$ref": "#/definitions/publish.Tokens"
+                },
+                "verification": {
+                    "$ref": "#/definitions/publish.VerificationSettings"
                 },
                 "versions": {
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/publicapi.SiteVersion"
                     }
+                }
+            }
+        },
+        "publicapi.SiteSocial": {
+            "type": "object",
+            "properties": {
+                "card_type": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "image": {
+                    "description": "Image is the preview picture (an absolute path of the public API) or null.",
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/publicapi.SiteImage"
+                        }
+                    ]
+                },
+                "title": {
+                    "type": "string"
+                },
+                "twitter_site": {
+                    "type": "string"
                 }
             }
         },
@@ -586,16 +843,47 @@
                 }
             }
         },
+        "publicapi.SitemapLanguage": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "prefix": {
+                    "type": "string"
+                }
+            }
+        },
         "publicapi.SitemapResponse": {
             "type": "object",
             "properties": {
+                "default_language": {
+                    "type": "string"
+                },
                 "entries": {
                     "type": "array",
                     "items": {
                         "$ref": "#/definitions/publish.SearchEntry"
                     }
                 },
+                "languages": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/publicapi.SitemapLanguage"
+                    }
+                },
                 "updated_at": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.AnalyticsSettings": {
+            "type": "object",
+            "properties": {
+                "google_analytics": {
+                    "type": "string"
+                },
+                "yandex_metrika": {
                     "type": "string"
                 }
             }
@@ -648,20 +936,6 @@
                 }
             }
         },
-        "publish.Header": {
-            "type": "object",
-            "properties": {
-                "height": {
-                    "type": "integer"
-                },
-                "links": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/publish.HeaderLink"
-                    }
-                }
-            }
-        },
         "publish.HeaderLink": {
             "type": "object",
             "properties": {
@@ -669,6 +943,17 @@
                     "type": "string"
                 },
                 "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.Language": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "name": {
                     "type": "string"
                 }
             }
@@ -1133,6 +1418,20 @@
                     }
                 },
                 "radius": {
+                    "type": "string"
+                }
+            }
+        },
+        "publish.VerificationSettings": {
+            "type": "object",
+            "properties": {
+                "bing": {
+                    "type": "string"
+                },
+                "google": {
+                    "type": "string"
+                },
+                "yandex": {
                     "type": "string"
                 }
             }
