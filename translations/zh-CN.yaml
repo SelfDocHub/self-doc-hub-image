@@ -1384,3 +1384,6 @@ mcp.group_publish: 站点发布
 mcp.publish_domain_write_warning: AI 可以添加用于发布文档的域名（在许可证限额内），并更改域名的样式和 SEO。无法通过 MCP 服务器删除域名。
 mcp.publish_not_licensed: 许可证不包含发布功能；没有它，下方的开关不起作用。
 mcp.publish_style_write_warning: AI 可以创建和修改已发布站点的样式和 SEO（颜色、标志、文本、链接、页脚），这些内容每位读者都会看到。服务器还会向 AI 指定的站点和图片地址发送请求；不会删除任何内容。
+breadcrumb.folder_missing_in_version: 所选版本中没有此文件夹。
+folders.empty: 此文件夹为空。
+folders.rename_failed: 无法重命名文件夹

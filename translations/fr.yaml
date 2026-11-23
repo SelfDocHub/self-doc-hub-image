@@ -1384,3 +1384,6 @@ mcp.group_publish: Publication des sites
 mcp.publish_domain_write_warning: L'IA peut ajouter un domaine sur lequel la documentation est publiée (dans la limite de la licence) et modifier le style et le SEO d'un domaine. Un domaine ne peut pas être supprimé via le serveur MCP.
 mcp.publish_not_licensed: La licence n'inclut pas la publication ; sans elle, les commutateurs ci-dessous n'ont aucun effet.
 mcp.publish_style_write_warning: L'IA peut créer et modifier les styles et le SEO des sites publiés (couleurs, logos, textes, liens, pied de page), ce que voit chaque lecteur de ces sites. Le serveur envoie aussi des requêtes aux adresses des sites et des images indiquées par l'IA ; rien n'est supprimé.
+breadcrumb.folder_missing_in_version: Ce dossier n'est pas disponible dans la version sélectionnée.
+folders.empty: Ce dossier est vide.
+folders.rename_failed: Impossible de renommer le dossier

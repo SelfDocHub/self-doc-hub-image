@@ -1384,3 +1384,6 @@ mcp.group_publish: Veröffentlichung der Websites
 mcp.publish_domain_write_warning: Die KI kann Domains hinzufügen, auf denen die Dokumentation veröffentlicht wird (im Rahmen des Lizenzlimits), und Stil sowie SEO einer Domain ändern. Eine Domain kann über den MCP-Server nicht gelöscht werden.
 mcp.publish_not_licensed: Die Lizenz enthält keine Veröffentlichung; die Schalter unten haben ohne sie keine Wirkung.
 mcp.publish_style_write_warning: Die KI kann Stile und SEO der veröffentlichten Websites erstellen und ändern (Farben, Logos, Texte, Links, Fußzeile), was jeder Leser dieser Websites sieht. Der Server sendet außerdem Anfragen an die Adressen der Websites und Bilder, die die KI nennt; es wird nichts gelöscht.
+breadcrumb.folder_missing_in_version: Dieser Ordner ist in der gewählten Version nicht verfügbar.
+folders.empty: Dieser Ordner ist leer.
+folders.rename_failed: Der Ordner konnte nicht umbenannt werden

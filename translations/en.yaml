@@ -1384,3 +1384,6 @@ mcp.group_publish: Publishing of the sites
 mcp.publish_domain_write_warning: The AI can add a domain the documentation is published on (within the limit of the license) and change the style and the SEO of a domain. A domain cannot be deleted through the MCP server.
 mcp.publish_not_licensed: The license does not include publishing; the switches below have no effect without it.
 mcp.publish_style_write_warning: The AI can create and change the styles and the SEO of the published sites (colors, logos, texts, links, footer), which is what every reader of those sites sees. The server also sends requests to the addresses of the sites and pictures the AI names; nothing is deleted.
+breadcrumb.folder_missing_in_version: This folder is not available in the selected version.
+folders.empty: This folder is empty.
+folders.rename_failed: Renaming the folder failed
