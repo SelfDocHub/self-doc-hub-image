@@ -1387,3 +1387,59 @@ mcp.publish_style_write_warning: A IA pode criar e alterar os estilos e o SEO do
 breadcrumb.folder_missing_in_version: Esta pasta não está disponível na versão selecionada.
 folders.empty: Esta pasta está vazia.
 folders.rename_failed: Não foi possível renomear a pasta
+admin.overlay_badge: Overlay
+admin.overlay_badge_title: Processado com o OpenAPI Overlay {title} (versão {version} do branch {branch})
+admin.overlay_source_badge: original exibido
+admin.overlay_source_failed: Não foi possível alternar o documento
+button.show_version_processed: Exibir novamente o documento processado pelo overlay
+button.show_version_source: Exibir para todos o documento original (sem o overlay)
+overlay_docs.action_changed: Alteradas
+overlay_docs.action_matched: Correspondências
+overlay_docs.action_op: Ação
+overlay_docs.action_target: Alvo
+overlay_docs.active: ativo
+overlay_docs.author: Por
+overlay_docs.check: Verificar
+overlay_docs.checked_ok: O overlay é aplicado sem erros.
+overlay_docs.checking: Verificando...
+overlay_docs.date: Data
+overlay_docs.disable: Desativar o overlay
+overlay_docs.disable_confirm: A documentação enviada para este branch não será mais processada. O histórico é mantido. Continuar?
+overlay_docs.disabled: desativado
+overlay_docs.empty: O branch ainda não tem overlay.
+overlay_docs.failed: Falha no overlay
+overlay_docs.file: Arquivo do overlay (JSON ou YAML)
+overlay_docs.hint: O overlay é aplicado à documentação enviada ao branch a partir de agora; a documentação já enviada não é alterada.
+overlay_docs.history: Histórico do branch
+overlay_docs.identical: Este overlay já é o ativo do branch.
+overlay_docs.no_match: Nenhuma correspondência
+overlay_docs.not_checked: O branch ainda não tem documentação, por isso não foi possível testar o overlay.
+overlay_docs.note: Observação
+overlay_docs.open: OpenAPI Overlay
+overlay_docs.required: Escolha um arquivo ou cole o overlay.
+overlay_docs.result: Resultado
+overlay_docs.text_placeholder: ou cole o overlay aqui
+overlay_docs.title: OpenAPI Overlay
+overlay_docs.upload: Enviar
+overlay_docs.uploaded: A versão {n} do overlay está ativa.
+overlay_docs.version: Versão
+overlay_docs.view: Carregar no formulário
+admin.overlay_column: Overlay
+overlay_docs.applied_report: Verificação do overlay no momento do envio
+overlay_docs.applied_to: Versão da documentação
+overlay_docs.content: Documento do overlay
+overlay_docs.info_title: Overlay aplicado à versão
+overlay_docs.download: Baixar
+overlay_docs.info_details: Detalhes
+admin.overlay_deleted: Overlay excluído
+overlay_docs.delete: Excluir versão
+overlay_docs.delete_confirm: Excluir esta versão do overlay? A documentação à qual ela já foi aplicada permanece como está.
+overlay_docs.version_title: Versão do OpenAPI Overlay
+admin.overlay_apply: Aplicar o overlay selecionado
+admin.overlay_apply_confirm: Aplicar o overlay {name} a esta versão? A documentação da versão muda para todos os leitores.
+admin.overlay_apply_failed: Não foi possível aplicar o overlay
+admin.overlay_change: Alterar o overlay aplicado
+admin.overlay_none: Nenhum overlay enviado
+admin.overlay_use: Usar overlay
+overlay_docs.actions_title: Ações do overlay
+overlay_docs.form_title: Nova versão do overlay

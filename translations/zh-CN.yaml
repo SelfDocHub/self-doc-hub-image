@@ -1387,3 +1387,59 @@ mcp.publish_style_write_warning: AI 可以创建和修改已发布站点的样�
 breadcrumb.folder_missing_in_version: 所选版本中没有此文件夹。
 folders.empty: 此文件夹为空。
 folders.rename_failed: 无法重命名文件夹
+admin.overlay_badge: 叠加层
+admin.overlay_badge_title: 已由 OpenAPI Overlay {title} 处理（分支 {branch} 的版本 {version}）
+admin.overlay_source_badge: 显示原文
+admin.overlay_source_failed: 切换文档失败
+button.show_version_processed: 重新显示经叠加层处理的文档
+button.show_version_source: 向所有人显示原始文档（不含叠加层）
+overlay_docs.action_changed: 已更改
+overlay_docs.action_matched: 匹配
+overlay_docs.action_op: 操作
+overlay_docs.action_target: 目标
+overlay_docs.active: 生效中
+overlay_docs.author: 作者
+overlay_docs.check: 检查
+overlay_docs.checked_ok: 叠加层可无错误地应用。
+overlay_docs.checking: 正在检查...
+overlay_docs.date: 日期
+overlay_docs.disable: 关闭叠加层
+overlay_docs.disable_confirm: 之后上传到此分支的文档将不再被处理。历史记录会保留。继续吗？
+overlay_docs.disabled: 已关闭
+overlay_docs.empty: 此分支还没有叠加层。
+overlay_docs.failed: 叠加层失败
+overlay_docs.file: 叠加层文件（JSON 或 YAML）
+overlay_docs.hint: 叠加层只应用于此后上传到该分支的文档；已上传的文档不会被更改。
+overlay_docs.history: 分支历史
+overlay_docs.identical: 此叠加层已经是该分支当前生效的叠加层。
+overlay_docs.no_match: 无匹配项
+overlay_docs.not_checked: 该分支还没有文档，因此无法试用叠加层。
+overlay_docs.note: 备注
+overlay_docs.open: OpenAPI Overlay
+overlay_docs.required: 请选择文件或粘贴叠加层。
+overlay_docs.result: 结果
+overlay_docs.text_placeholder: 或在此粘贴叠加层
+overlay_docs.title: OpenAPI Overlay
+overlay_docs.upload: 上传
+overlay_docs.uploaded: 叠加层版本 {n} 已生效。
+overlay_docs.version: 版本
+overlay_docs.view: 载入表单
+admin.overlay_column: 叠加层
+overlay_docs.applied_report: 上传时对叠加层的检查结果
+overlay_docs.applied_to: 文档版本
+overlay_docs.content: 叠加层文档
+overlay_docs.info_title: 应用于该版本的叠加层
+overlay_docs.download: 下载
+overlay_docs.info_details: 详情
+admin.overlay_deleted: 已删除的叠加层
+overlay_docs.delete: 删除版本
+overlay_docs.delete_confirm: 删除此叠加层版本？已应用过它的文档保持不变。
+overlay_docs.version_title: OpenAPI Overlay 版本
+admin.overlay_apply: 应用所选叠加层
+admin.overlay_apply_confirm: 将叠加层 {name} 应用到此版本？该版本的文档将对所有读者生效。
+admin.overlay_apply_failed: 应用叠加层失败
+admin.overlay_change: 更改已应用的叠加层
+admin.overlay_none: 尚未上传叠加层
+admin.overlay_use: 使用叠加层
+overlay_docs.actions_title: 叠加层的操作
+overlay_docs.form_title: 新的叠加层版本

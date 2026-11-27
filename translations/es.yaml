@@ -1387,3 +1387,59 @@ mcp.publish_style_write_warning: La IA puede crear y modificar los estilos y el 
 breadcrumb.folder_missing_in_version: Esta carpeta no está disponible en la versión seleccionada.
 folders.empty: Esta carpeta está vacía.
 folders.rename_failed: No se pudo renombrar la carpeta
+admin.overlay_badge: Overlay
+admin.overlay_badge_title: Procesado con el OpenAPI Overlay {title} (versión {version} de la rama {branch})
+admin.overlay_source_badge: se muestra el original
+admin.overlay_source_failed: No se pudo cambiar el documento
+button.show_version_processed: Volver a mostrar el documento procesado por el overlay
+button.show_version_source: Mostrar a todos el documento original (sin el overlay)
+overlay_docs.action_changed: Modificadas
+overlay_docs.action_matched: Coincidencias
+overlay_docs.action_op: Acción
+overlay_docs.action_target: Destino
+overlay_docs.active: activo
+overlay_docs.author: Por
+overlay_docs.check: Comprobar
+overlay_docs.checked_ok: El overlay se aplica sin errores.
+overlay_docs.checking: Comprobando...
+overlay_docs.date: Fecha
+overlay_docs.disable: Desactivar el overlay
+overlay_docs.disable_confirm: La documentación que se suba a esta rama ya no se procesará. El historial se conserva. ¿Continuar?
+overlay_docs.disabled: desactivado
+overlay_docs.empty: La rama aún no tiene ningún overlay.
+overlay_docs.failed: El overlay falló
+overlay_docs.file: Archivo del overlay (JSON o YAML)
+overlay_docs.hint: El overlay se aplica a la documentación que se suba a la rama a partir de ahora; la documentación ya subida no se modifica.
+overlay_docs.history: Historial de la rama
+overlay_docs.identical: Este overlay ya es el activo de la rama.
+overlay_docs.no_match: Sin coincidencias
+overlay_docs.not_checked: La rama aún no tiene documentación, por lo que no se pudo probar el overlay.
+overlay_docs.note: Nota
+overlay_docs.open: OpenAPI Overlay
+overlay_docs.required: Elija un archivo o pegue el overlay.
+overlay_docs.result: Resultado
+overlay_docs.text_placeholder: o pegue aquí el overlay
+overlay_docs.title: OpenAPI Overlay
+overlay_docs.upload: Subir
+overlay_docs.uploaded: La versión {n} del overlay está activa.
+overlay_docs.version: Versión
+overlay_docs.view: Cargar en el formulario
+admin.overlay_column: Overlay
+overlay_docs.applied_report: Comprobación del overlay cuando se subió
+overlay_docs.applied_to: Versión de la documentación
+overlay_docs.content: Documento del overlay
+overlay_docs.info_title: Overlay aplicado a la versión
+overlay_docs.download: Descargar
+overlay_docs.info_details: Detalles
+admin.overlay_deleted: Overlay eliminado
+overlay_docs.delete: Eliminar versión
+overlay_docs.delete_confirm: ¿Eliminar esta versión del overlay? La documentación a la que ya se aplicó permanece como está.
+overlay_docs.version_title: Versión del OpenAPI Overlay
+admin.overlay_apply: Aplicar el overlay seleccionado
+admin.overlay_apply_confirm: ¿Aplicar el overlay {name} a esta versión? La documentación de la versión cambia para todos los lectores.
+admin.overlay_apply_failed: No se pudo aplicar el overlay
+admin.overlay_change: Cambiar el overlay aplicado
+admin.overlay_none: No hay overlays subidos
+admin.overlay_use: Usar overlay
+overlay_docs.actions_title: Acciones del overlay
+overlay_docs.form_title: Nueva versión del overlay

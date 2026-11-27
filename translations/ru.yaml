@@ -1394,3 +1394,59 @@ mcp.publish_style_write_warning: ИИ может создавать и изме�
 breadcrumb.folder_missing_in_version: Эта папка отсутствует в выбранной версии.
 folders.empty: Эта папка пуста.
 folders.rename_failed: Ошибка при переименовании папки
+admin.overlay_badge: Оверлей
+admin.overlay_badge_title: Обработано с помощью оверлея OpenAPI {title} (версия {version} ветки {branch})
+admin.overlay_source_badge: показан оригинал
+admin.overlay_source_failed: Не удалось переключить документ
+button.show_version_processed: Показать документ, обработанный оверлеем, ещё раз
+button.show_version_source: Показать исходный документ (без оверлея) всем
+overlay_docs.action_changed: Изменено
+overlay_docs.action_matched: Совпадение
+overlay_docs.action_op: Действие
+overlay_docs.action_target: Цель
+overlay_docs.active: активно
+overlay_docs.author: Автор
+overlay_docs.check: Проверка
+overlay_docs.checked_ok: Оперлей применяется без ошибок.
+overlay_docs.checking: Проверка...
+overlay_docs.date: Дата
+overlay_docs.disable: Отключить оверлей
+overlay_docs.disable_confirm: Документация, загруженная в эту ветку, больше не будет обрабатываться. История останется. Продолжить?
+overlay_docs.disabled: отключено
+overlay_docs.empty: В ветке пока нет оверлеев.
+overlay_docs.failed: Оверлей не удалось применить
+overlay_docs.file: Файл оверлея (JSON или YAML)
+overlay_docs.hint: С этого момента оверлей применяется к документации, загружаемой в ветку; уже загруженная документация не изменяется.
+overlay_docs.history: История ветки
+overlay_docs.identical: Этот оверлей уже является активным для данной ветки.
+overlay_docs.no_match: Ничего не найдено
+overlay_docs.not_checked: В ветке пока нет документации, поэтому применить оверлей не удалось.
+overlay_docs.note: Примечание
+overlay_docs.open: Оверлей OpenAPI
+overlay_docs.required: Выберите файл или вставьте текст оверлея.
+overlay_docs.result: Результат
+overlay_docs.text_placeholder: или вставьте оверлей сюда
+overlay_docs.title: Оверлей OpenAPI
+overlay_docs.upload: Загрузить
+overlay_docs.uploaded: Активна версия оверлея {n}.
+overlay_docs.version: Версия
+overlay_docs.view: Загрузить в форму
+admin.overlay_column: Оверлей
+overlay_docs.applied_report: Проверка оверлея при загрузке
+overlay_docs.applied_to: Версия документации
+overlay_docs.content: Документ оверлея
+overlay_docs.info_title: Оверлей, применен к версии
+overlay_docs.download: Скачать
+overlay_docs.info_details: Подробности
+admin.overlay_deleted: Оверлей удален
+overlay_docs.delete: Удалить версию
+overlay_docs.delete_confirm: Удалить эту версию оверлея? Документация, к которой он уже был применен, останется без изменений.
+overlay_docs.version_title: Версия оверлея OpenAPI
+admin.overlay_apply: Применить выбранный оверлей
+admin.overlay_apply_confirm: Применить оверлей {name} к этой версии? Документация этой версии изменится для каждого читателя.
+admin.overlay_apply_failed: Ошибка при применении оверлея
+admin.overlay_change: Изменить примененный оверлей
+admin.overlay_none: Оверлеи не загружены
+admin.overlay_use: Использовать оверлей
+overlay_docs.actions_title: Действия с оверлеем
+overlay_docs.form_title: Новая версия оверлея

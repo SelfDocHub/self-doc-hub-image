@@ -1387,3 +1387,59 @@ mcp.publish_style_write_warning: L'IA peut créer et modifier les styles et le S
 breadcrumb.folder_missing_in_version: Ce dossier n'est pas disponible dans la version sélectionnée.
 folders.empty: Ce dossier est vide.
 folders.rename_failed: Impossible de renommer le dossier
+admin.overlay_badge: Overlay
+admin.overlay_badge_title: Traité avec l'OpenAPI Overlay {title} (version {version} de la branche {branch})
+admin.overlay_source_badge: original affiché
+admin.overlay_source_failed: Impossible de basculer le document
+button.show_version_processed: Afficher à nouveau le document traité par l'overlay
+button.show_version_source: Afficher à tous le document d'origine (sans l'overlay)
+overlay_docs.action_changed: Modifiés
+overlay_docs.action_matched: Correspondances
+overlay_docs.action_op: Action
+overlay_docs.action_target: Cible
+overlay_docs.active: actif
+overlay_docs.author: Par
+overlay_docs.check: Vérifier
+overlay_docs.checked_ok: L'overlay s'applique sans erreur.
+overlay_docs.checking: Vérification en cours...
+overlay_docs.date: Date
+overlay_docs.disable: Désactiver l'overlay
+overlay_docs.disable_confirm: La documentation téléversée dans cette branche ne sera plus traitée. L'historique est conservé. Continuer ?
+overlay_docs.disabled: désactivé
+overlay_docs.empty: La branche n'a pas encore d'overlay.
+overlay_docs.failed: Échec de l'overlay
+overlay_docs.file: Fichier de l'overlay (JSON ou YAML)
+overlay_docs.hint: L'overlay s'applique à la documentation téléversée dans la branche à partir de maintenant ; la documentation déjà téléversée n'est pas modifiée.
+overlay_docs.history: Historique de la branche
+overlay_docs.identical: Cet overlay est déjà l'overlay actif de la branche.
+overlay_docs.no_match: Aucune correspondance
+overlay_docs.not_checked: La branche n'a pas encore de documentation, l'overlay n'a donc pas pu être essayé.
+overlay_docs.note: Remarque
+overlay_docs.open: OpenAPI Overlay
+overlay_docs.required: Choisissez un fichier ou collez l'overlay.
+overlay_docs.result: Résultat
+overlay_docs.text_placeholder: ou collez l'overlay ici
+overlay_docs.title: OpenAPI Overlay
+overlay_docs.upload: Téléverser
+overlay_docs.uploaded: La version {n} de l'overlay est active.
+overlay_docs.version: Version
+overlay_docs.view: Charger dans le formulaire
+admin.overlay_column: Overlay
+overlay_docs.applied_report: Vérification de l'overlay lors de son téléversement
+overlay_docs.applied_to: Version de la documentation
+overlay_docs.content: Document de l'overlay
+overlay_docs.info_title: Overlay appliqué à la version
+overlay_docs.download: Télécharger
+overlay_docs.info_details: Détails
+admin.overlay_deleted: Overlay supprimé
+overlay_docs.delete: Supprimer la version
+overlay_docs.delete_confirm: Supprimer cette version de l'overlay ? La documentation à laquelle elle a déjà été appliquée reste telle quelle.
+overlay_docs.version_title: Version de l'OpenAPI Overlay
+admin.overlay_apply: Appliquer l'overlay sélectionné
+admin.overlay_apply_confirm: Appliquer l'overlay {name} à cette version ? La documentation de la version change pour tous les lecteurs.
+admin.overlay_apply_failed: Impossible d'appliquer l'overlay
+admin.overlay_change: Changer l'overlay appliqué
+admin.overlay_none: Aucun overlay téléversé
+admin.overlay_use: Utiliser l'overlay
+overlay_docs.actions_title: Actions de l'overlay
+overlay_docs.form_title: Nouvelle version de l'overlay
