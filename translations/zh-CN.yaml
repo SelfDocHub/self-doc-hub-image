@@ -1443,3 +1443,10 @@ admin.overlay_none: 尚未上传叠加层
 admin.overlay_use: 使用叠加层
 overlay_docs.actions_title: 叠加层的操作
 overlay_docs.form_title: 新的叠加层版本
+endpoint.history_copy_link: 复制此变更的链接
+endpoint.history_after: 变更后
+endpoint.history_before: 变更前
+endpoint.history_empty_text: 空
+endpoint.history_no_longer_deprecated: 不再弃用
+endpoint.history_now_deprecated: 已弃用
+endpoint.history_truncated: 文本在 32 KB 处被截断显示。

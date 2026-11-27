@@ -1443,3 +1443,10 @@ admin.overlay_none: Nenhum overlay enviado
 admin.overlay_use: Usar overlay
 overlay_docs.actions_title: Ações do overlay
 overlay_docs.form_title: Nova versão do overlay
+endpoint.history_copy_link: Copiar link para esta alteração
+endpoint.history_after: Depois
+endpoint.history_before: Antes
+endpoint.history_empty_text: vazio
+endpoint.history_no_longer_deprecated: Não é mais obsoleto
+endpoint.history_now_deprecated: Obsoleto
+endpoint.history_truncated: O texto é exibido cortado em 32 KB.
